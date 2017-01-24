@@ -1,0 +1,47 @@
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in /Users/apple/Applications/android/android-sdk_studio/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the proguardFiles
+# directive in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+-dontoptimize
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify
+-verbose
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+
+#-keep public class * extends android.app.Activity
+#-keep public class * extends android.app.Application
+#-keep public class * extends android.app.Service
+#-keep public class * extends android.content.BroadcastReceiver
+#-keep public class * extends android.content.ContentProvider
+#-keep public class * extends android.app.backup.BackupAgentHelper
+#-keep public class * extends android.preference.Preference
+## nineoldandroids.jar
+-keep public class com.auto.launcher.ServiceInit {*;}
+-keep public class com.auto.launcher.Bean {*;}
+-keep class com.auto.launcher.** {*;}
+-keepclassmembers class com.auto.launcher.** {*;}
+#
+#
+#-keep public interface com.auto.launcher.** {*;}
+#-keepclassmembers public interface com.auto.launcher.** {*;}
+#-keep class * implements android.os.IInterface {*;}
+
+#-keep public class com.auto.launcher.IShareService$Stub {*;}
+
+
+#-dontwarn com.auto.launcher.**

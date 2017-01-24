@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ImageLocation</string>
+
+
+    <!--  图片浏览-->
+    <string name="no_choose_picture">未选择图片</string>
+    <string name="choose_picture">选择图片</string>
+    <string name="selecterindex">%1$d/%2$d</string>
+    <string name="pic">%1$d张</string>
+    <string name="pic_index">%1$d/%2$d</string>
+    <string name="send_index">完成(%1$d/%2$d)</string>
+    <string name="send_image">完成</string>
+    <string name="priview">预览(%1$d)</string>
+    <string name="priview_no">预览</string>
+    <string name="all_image">所有图片</string>
+    <string name="delete_image">删除</string>
+    <string name="delete_image_tip">确定删除该张照片?</string>
+    <string name="max_image">最多只能选择%1$d张图片</string>
+    <string name="no_image">没有发现照片哦~</string>
+</resources>

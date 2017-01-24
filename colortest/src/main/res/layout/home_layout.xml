@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调色板"
+        android:background="#cfcece" />
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="高斯模糊"
+        android:background="#d7d6d6"
+        android:alpha="120"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

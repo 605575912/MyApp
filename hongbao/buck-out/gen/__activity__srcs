@@ -1,0 +1,7 @@
+src/main/java/com/lzx/hb/MainActivity.java
+src/main/java/com/lzx/hb/QiangHongBaoService.java
+src/main/java/com/lzx/hb/job/AccessbilityJob.java
+src/main/java/com/lzx/hb/job/BaseAccessbilityJob.java
+src/main/java/com/lzx/hb/job/QQAccessbilityJob.java
+src/main/java/com/lzx/hb/job/WechatAccessbilityJob.java
+src/main/java/com/lzx/hb/util/AccessibilityHelper.java

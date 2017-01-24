@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="text_black">#3c3c3c</color>
+    <color name="tab_text_gray">#999999</color>
+    <color name="transplant">#00000000</color>
+    <color name="gray">#707070</color>
+    <color name="bg_white">#eeeeee</color>
+    <color name="b_white">#f0f0f0</color>
+    <color name="c_white">#e0e0e0</color>
+    <color name="text_blue">#37aad0</color>
+    <color name="base_txt_textColor">#ff575454</color>
+    <color name="agray">#aaaaaa</color>
+    <color name="bgray">#646464</color>
+    <color name="cgray">#c8c8c8</color>
+    <color name="dgray">#323232</color>
+    <color name="egray">#404040</color>
+    <color name="fgray">#dcdcdc</color>
+    <color name="ggray">#999999</color>
+    <color name="hgray">#828282</color>
+    <color name="red">#ff0000</color>
+    <color name="aorange">#ff6e01</color>
+    <color name="borange">#f87e02</color>
+    <color name="agreen">#00af2d</color>
+    <color name="translucent">#8b000000</color>
+    <color name="app_blue">#4bbee1</color>
+    <color name="app_red">#ff4400</color>
+    <color name="app_orange">#ff7f67</color>
+    <color name="app_green">#36ca75</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="orange">#FFA500</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+
+
+
+    <color name="down_btn_blue">#22beff</color>
+    <color name="down_btn_orange">#ffae00</color>
+    <color name="down_btn_gray">#bbbbbb</color>
+    <color name="down_btn_red">#fd5300</color>
+    <color name="down_btn_white">#ffffff</color>
+</resources>

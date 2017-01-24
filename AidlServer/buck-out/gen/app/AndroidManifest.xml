@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aidlserver"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.huawei.appmarket.provider.readPermission" />
+    <uses-permission android:name="com.huawei.appmarket.provider.writePermission" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <application
+        android:allowBackup="true"
+        android:label="app_name">
+
+
+        <service android:name=".ASService" />
+
+
+        <activity
+            android:name="com.example.aidlserver.MainActivity"
+            android:label="app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

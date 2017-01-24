@@ -1,0 +1,9 @@
+[alias]
+debug = //:debug
+release = //:release
+[android]
+	target = android-19
+[android]
+  build_tools_version = 19.1.0
+[project]
+	ignore = .git, **/.svn,

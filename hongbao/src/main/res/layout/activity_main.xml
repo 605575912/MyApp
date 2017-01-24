@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.codeboy.qianghongbao.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:text="本软件在开启辅助功能服务，并且非锁屏情况下才生效，并且开启对应软件 QQ 微信 通知栏 \n ,在软件当前界面可以自动禁止锁屏 \n
+        挂机时候请打开此界面，并且调低亮度，建议保持充电状态下挂机" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0cccb9"
+        android:padding="10dp"
+        android:text="点击开启辅助功能"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="开启禁止锁屏"
+        android:layout_marginTop="20dp"
+        android:background="#1baabd"
+        android:padding="10dp" />
+
+</LinearLayout>

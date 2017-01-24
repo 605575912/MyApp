@@ -1,0 +1,10 @@
+libs/.DS_Store 5da1456763c6813eac4184f9655a03521bcbc4b6
+libs/android-support-v4.jar 5896b0a4e377ac4242eb2bc785220c1c4fc052f4
+libs/android-support-v7-cardview.jar 283b895ba26828d674aab69bcd77af16c2fb6550
+libs/android-support-v7-palette.jar 3cfd31f881ef254ab3349f3fe4635f27c80177f3
+libs/android-support-v7-recyclerview.jar 12b40458075441c1a66d3fe16e72217ee7472a47
+libs/armeabi/libspeex.so 49230175ec3e914746982d5daae7ed1c34d244d6
+libs/bugly_1.2.8_release.jar d29fe65f5ccf6cd835bd0eb6a011bacf1594a818
+libs/Loader.jar 7c09f5cd770e29b47c111c0387bb752fcd11c411
+libs/nineoldandroids.jar 2fec67d888b2067d9b9b72fca88e17a541207380
+libs/UIFrame.jar eacce93342a6e99a8d3c88a81e97da93b07b9773

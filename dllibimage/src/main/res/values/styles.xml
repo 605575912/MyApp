@@ -1,0 +1,16 @@
+<resources>
+
+
+
+    <style name="image_dialog_alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>-->
+    </style>
+
+</resources>

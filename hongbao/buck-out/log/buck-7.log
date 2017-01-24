@@ -1,0 +1,118 @@
+[2016-02-23 09:09:18.549][debug][command:09710c99-a76f-4d97-bcfe-d87ac3d89fa6][tid:440][com.facebook.buck.cli.Main] Starting up (build date 1970-01-01 07:59:59 +0800, rev b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448), args: [install, app, --d]
+[2016-02-23 09:09:18.555][debug][command:09710c99-a76f-4d97-bcfe-d87ac3d89fa6][tid:440][com.facebook.buck.cli.Main] System properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, jnidispatch.path=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/jna-93029210/jna2336485544085413124.tmp, os.name=Mac OS X, buck.enable_objc=true, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_31-b13, buck.path_to_intellij_py=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_intellij_py, jna.loaded=true, buck.testrunner_classes=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/testrunner_classes, buck.logging_config_file=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/logging_config_file, buck.path_to_sh_binary_template=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_sh_binary_template, user.name=apple, buck.path_to_pywatchman=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_pywatchman, buck.report_generator_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/report_generator_jar, buck.git_commit=b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib, java.version=1.8.0_31, user.timezone=Asia/Chongqing, buck.test_util_no_tests_dir=true, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, file.separator=/, java.specification.name=Java Platform API Specification, buck.jacoco_agent_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/jacoco_agent_jar, java.class.version=52.0, user.country=CN, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.2, buck.version_uid=b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, org.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.JavaUtilLog, path.separator=:, java.vm.version=25.31-b07, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, buck.dx=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/dx, buck.git_commit_timestamp=-1, user.home=/Users/apple, buck.path_to_asm_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_asm_jar, java.specification.vendor=Oracle Corporation, buck.git_dirty=0, java.library.path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, java.vendor.url=http://java.oracle.com/, java.vm.vendor=Oracle Corporation, gopherProxySet=false, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.facebook.buck.cli.bootstrapper.ClassLoaderBootstrapper com.martiansoftware.nailgun.NGServer local:.buckd/sock 60000, java.class.path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/bootstrapper_jar, buck.buckd_dir=/Users/apple/Documents/MyApp/hongbao/.buckd, buck.path_to_pathlib_py=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/pathlib.py, buck.buckd_launch_time_nanos=1595669186399, java.vm.specification.name=Java Virtual Machine Specification, com.martiansoftware.nailgun.NGServer.outputPath=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/ngserver-out, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, java.awt.headless=true, java.io.tmpdir=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp, buck.android_agent_path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/android_agent_path, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, jna.platform.library.path=/usr/lib:/usr/lib, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, buck.path_to_pex=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_pex, java.ext.dirs=/Users/apple/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, java.util.logging.config.class=com.facebook.buck.cli.bootstrapper.LogConfig, user.dir=/Users/apple/Documents/MyApp/hongbao, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, buck.native_exopackage_fake_path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/native_exopackage_fake_path, file.encoding=UTF-8, java.specification.version=1.8}
+[2016-02-23 09:09:18.632][debug][command:09710c99-a76f-4d97-bcfe-d87ac3d89fa6][tid:440][com.facebook.buck.cli.Main] Done.
+[2016-02-23 09:09:18.632][info ][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Server cleanly exited with status 1
+com.martiansoftware.nailgun.NGExitException: ExitException: status 1
+	at com.martiansoftware.nailgun.NGSecurityManager.checkExit(NGSecurityManager.java:56)
+	at java.lang.Runtime.exit(Runtime.java:107)
+	at java.lang.System.exit(System.java:968)
+	at com.facebook.buck.cli.Main.runMainThenExit(Main.java:1498)
+	at com.facebook.buck.cli.Main.nailMain(Main.java:1514)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:338)
+
+[2016-02-23 09:09:18.633][warn ][command:null][tid:444][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future raised an exception
+java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.EOFException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:206)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: java.io.EOFException
+	at com.martiansoftware.nailgun.NGInputStream$1$1.run(NGInputStream.java:85)
+	... 5 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at com.martiansoftware.nailgun.NGInputStream.readChunk(NGInputStream.java:198)
+	at com.martiansoftware.nailgun.NGInputStream.access$200(NGInputStream.java:35)
+	at com.martiansoftware.nailgun.NGInputStream$1$1.run(NGInputStream.java:83)
+	... 5 more
+
+[2016-02-23 09:09:18.633][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 09:09:18.634][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 09:09:18.635][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 09:09:18.635][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 09:09:18.634][debug][command:null][tid:444][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 09:09:18.635][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 09:09:18.635][debug][command:null][tid:440][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 09:09:18.635][info ][command:null][tid:440][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 09:09:21.955][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 09:09:21.956][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 09:09:21.957][debug][command:null][tid:443][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 09:09:21.957][info ][command:null][tid:443][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 09:09:21.957][warn ][command:null][tid:448][com.martiansoftware.nailgun.NGInputStream] Unknown chunk type:  
+[2016-02-23 09:09:21.957][warn ][command:null][tid:447][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future was interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2016-02-23 09:09:21.958][debug][command:null][tid:447][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 09:09:21.958][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 09:09:21.960][debug][command:null][tid:450][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 09:09:21.960][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 09:09:21.961][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 09:09:21.961][warn ][command:null][tid:449][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future was interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2016-02-23 09:09:21.962][debug][command:null][tid:449][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 09:09:21.961][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 09:09:21.962][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 09:09:21.962][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 09:09:21.962][debug][command:null][tid:446][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 09:09:21.962][info ][command:null][tid:446][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 09:09:21.962][debug][command:null][tid:450][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 09:09:21.963][debug][command:null][tid:452][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 09:09:21.965][debug][command:b4b871c0-d7db-4b45-b1d0-550fd7d86f18][tid:450][com.facebook.buck.cli.Main] Rotating log.

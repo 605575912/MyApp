@@ -1,0 +1,6 @@
+com/example/aidlserver/R b48396cd598e71c8dc7a614c943e5fbfdcf45f82
+com/example/aidlserver/R$dimen adf4effb2f7f7962b247b6921aa7cd5474075fe9
+com/example/aidlserver/R$drawable f31451def4a75960decab2bd02ece4fe7a185aeb
+com/example/aidlserver/R$id 6a58572c21195218f06d5545506929e22ba2a413
+com/example/aidlserver/R$layout fc4b93ad1ec7d287c1b41dfa7eb8088936d2fba8
+com/example/aidlserver/R$string 7a3852649ade369ae1340917cab548b43fb9c457

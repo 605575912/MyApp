@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 图片选择 -->
+    <color name="image_textgray">#b7b7b7</color>
+    <color name="image_textgreen">#65bc08</color>
+    <color name="title_push_up_pressed">#E9E9E9</color>
+</resources>

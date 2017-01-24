@@ -1,0 +1,16 @@
+Executable : /Users/apple/Applications/android-ndk-r13/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Volumes/Android/MyApp/jnitest/jni/Android.mk
+NDK_APPLICATION_MK=/Volumes/Android/MyApp/jnitest/jni/Application.mk
+APP_ABI=armeabi-v7a
+NDK_ALL_ABIS=armeabi-v7a
+NDEBUG=1
+APP_PLATFORM=android-9
+NDK_OUT=/Volumes/Android/MyApp/jnitest/build/intermediates/ndkBuild/debug/obj
+NDK_LIBS_OUT=/Volumes/Android/MyApp/jnitest/build/intermediates/ndkBuild/debug/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-n
+jvmArgs : 
+

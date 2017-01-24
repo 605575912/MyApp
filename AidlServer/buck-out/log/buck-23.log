@@ -1,0 +1,44 @@
+[2016-02-01 00:12:15.955][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-01 00:12:15.961][debug][command:null][tid:15][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-01 00:12:15.999][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-01 00:12:16.011][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-01 00:12:16.011][warn ][command:null][tid:16][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future raised an exception
+java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.EOFException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:206)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.RuntimeException: java.io.EOFException
+	at com.martiansoftware.nailgun.NGInputStream$1$1.run(NGInputStream.java:85)
+	... 5 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at com.martiansoftware.nailgun.NGInputStream.readChunk(NGInputStream.java:198)
+	at com.martiansoftware.nailgun.NGInputStream.access$200(NGInputStream.java:35)
+	at com.martiansoftware.nailgun.NGInputStream$1$1.run(NGInputStream.java:83)
+	... 5 more
+
+[2016-02-01 00:12:16.013][debug][command:null][tid:18][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-01 00:12:16.012][debug][command:null][tid:15][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-01 00:12:16.012][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-01 00:12:16.013][debug][command:null][tid:16][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-01 00:12:16.015][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-01 00:12:16.015][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-01 00:12:16.015][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-01 00:12:16.015][debug][command:null][tid:14][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-01 00:12:16.015][info ][command:null][tid:14][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-01 00:12:16.073][info ][command:null][tid:15][com.facebook.buck.cli.HangMonitor] HangMonitorAutoStart
+[2016-02-01 00:12:16.497][debug][command:30c5463d-8ae2-490e-b668-f7df1a0f8bac][tid:15][com.facebook.buck.cli.Main] Rotating log.

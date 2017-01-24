@@ -1,0 +1,125 @@
+com.lzx.hb.MainActivity -> com.lzx.hb.MainActivity:
+    android.widget.Button button2 -> a
+    boolean islock -> b
+    android.widget.Button button -> c
+    android.os.PowerManager pManager -> d
+    java.lang.String TAG -> e
+    android.os.PowerManager$WakeLock mWakeLock -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void lockstatue(boolean) -> a
+    void onResume() -> onResume
+    void onDestroy() -> onDestroy
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void openAccessibilityServiceSettings() -> a
+    void access$000(com.lzx.hb.MainActivity) -> a
+com.lzx.hb.MainActivity$1 -> com.lzx.hb.a:
+    com.lzx.hb.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.lzx.hb.MainActivity$2 -> com.lzx.hb.b:
+    android.content.SharedPreferences val$sharedPreferences -> a
+    com.lzx.hb.MainActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.lzx.hb.QiangHongBaoService -> com.lzx.hb.QiangHongBaoService:
+    java.lang.Class[] ACCESSBILITY_JOBS -> a
+    com.lzx.hb.QiangHongBaoService service -> b
+    java.util.List mAccessbilityJobs -> c
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+    void onInterrupt() -> onInterrupt
+    void onServiceConnected() -> onServiceConnected
+    void onAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> onAccessibilityEvent
+    void lockHome() -> a
+    boolean isRunning() -> b
+com.lzx.hb.R -> com.lzx.hb.c:
+com.lzx.hb.R$id -> com.lzx.hb.d:
+    int button -> button
+    int button2 -> button2
+    int container -> container
+    int textView -> textView
+com.lzx.hb.R$layout -> com.lzx.hb.e:
+    int activity_main -> activity_main
+com.lzx.hb.R$string -> com.lzx.hb.f:
+    int accessibility_description -> accessibility_description
+    int main_name -> main_name
+    int open_service_button -> open_service_button
+    int open_service_title -> open_service_title
+    int service_name -> service_name
+    int tips -> tips
+com.lzx.hb.job.AccessbilityJob -> com.lzx.hb.a.a:
+    java.lang.String getTargetPackageName() -> a
+    void onCreateJob(com.lzx.hb.QiangHongBaoService) -> a
+    void onReceiveJob(android.view.accessibility.AccessibilityEvent) -> a
+    void onStopJob() -> b
+com.lzx.hb.job.BaseAccessbilityJob -> com.lzx.hb.a.b:
+    com.lzx.hb.QiangHongBaoService service -> a
+    void onCreateJob(com.lzx.hb.QiangHongBaoService) -> a
+    android.content.Context getContext() -> c
+    com.lzx.hb.QiangHongBaoService getService() -> d
+com.lzx.hb.job.QQAccessbilityJob -> com.lzx.hb.a.c:
+    boolean isFirstChecked -> a
+    android.content.pm.PackageInfo mWechatPackageInfo -> b
+    android.os.Handler mHandler -> c
+    android.content.BroadcastReceiver broadcastReceiver -> d
+    void onCreateJob(com.lzx.hb.QiangHongBaoService) -> a
+    void onStopJob() -> b
+    java.lang.String getTargetPackageName() -> a
+    void onReceiveJob(android.view.accessibility.AccessibilityEvent) -> a
+    void openNotify(android.view.accessibility.AccessibilityEvent) -> b
+    void openHongBao(android.view.accessibility.AccessibilityEvent) -> c
+    void handleLuckyMoneyReceive() -> f
+    void home() -> e
+    void home(long) -> a
+    android.os.Handler getHandler() -> g
+    int getWechatVersion() -> h
+    void updatePackageInfo() -> i
+    void access$000(com.lzx.hb.job.QQAccessbilityJob) -> a
+    android.os.Handler access$100(com.lzx.hb.job.QQAccessbilityJob) -> b
+com.lzx.hb.job.QQAccessbilityJob$1 -> com.lzx.hb.a.d:
+    com.lzx.hb.job.QQAccessbilityJob this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.lzx.hb.job.QQAccessbilityJob$2 -> com.lzx.hb.a.e:
+    android.view.accessibility.AccessibilityNodeInfo val$targetNode1 -> a
+    android.view.accessibility.AccessibilityNodeInfo val$targesend -> b
+    com.lzx.hb.job.QQAccessbilityJob this$0 -> c
+    void run() -> run
+com.lzx.hb.job.QQAccessbilityJob$3 -> com.lzx.hb.a.f:
+    com.lzx.hb.job.QQAccessbilityJob this$0 -> a
+    void run() -> run
+com.lzx.hb.job.QQAccessbilityJob$3$1 -> com.lzx.hb.a.g:
+    com.lzx.hb.job.QQAccessbilityJob$3 this$1 -> a
+    void run() -> run
+com.lzx.hb.job.WechatAccessbilityJob -> com.lzx.hb.a.h:
+    boolean isFirstChecked -> a
+    android.content.pm.PackageInfo mWechatPackageInfo -> b
+    android.os.Handler mHandler -> c
+    android.content.BroadcastReceiver broadcastReceiver -> d
+    void onCreateJob(com.lzx.hb.QiangHongBaoService) -> a
+    void onStopJob() -> b
+    java.lang.String getTargetPackageName() -> a
+    void onReceiveJob(android.view.accessibility.AccessibilityEvent) -> a
+    void openNotify(android.view.accessibility.AccessibilityEvent) -> b
+    void openHongBao(android.view.accessibility.AccessibilityEvent) -> c
+    void handleLuckyMoneyReceive() -> f
+    void home() -> e
+    void home(long) -> a
+    void handleChatListHongBao() -> g
+    android.os.Handler getHandler() -> h
+    int getWechatVersion() -> i
+    void updatePackageInfo() -> j
+    void access$000(com.lzx.hb.job.WechatAccessbilityJob) -> a
+    android.os.Handler access$100(com.lzx.hb.job.WechatAccessbilityJob) -> b
+com.lzx.hb.job.WechatAccessbilityJob$1 -> com.lzx.hb.a.i:
+    com.lzx.hb.job.WechatAccessbilityJob this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.lzx.hb.job.WechatAccessbilityJob$2 -> com.lzx.hb.a.j:
+    com.lzx.hb.job.WechatAccessbilityJob this$0 -> a
+    void run() -> run
+com.lzx.hb.job.WechatAccessbilityJob$2$1 -> com.lzx.hb.a.k:
+    com.lzx.hb.job.WechatAccessbilityJob$2 this$1 -> a
+    void run() -> run
+com.lzx.hb.util.AccessibilityHelper -> com.lzx.hb.b.a:
+    android.view.accessibility.AccessibilityNodeInfo findNodeInfosById(android.view.accessibility.AccessibilityNodeInfo,java.lang.String) -> a
+    android.view.accessibility.AccessibilityNodeInfo findNodeInfosByText(android.view.accessibility.AccessibilityNodeInfo,java.lang.String) -> b
+    android.view.accessibility.AccessibilityNodeInfo findNodeInfosByTexts(android.view.accessibility.AccessibilityNodeInfo,java.lang.String[]) -> a
+    android.view.accessibility.AccessibilityNodeInfo findNodeInfosByClassName(android.view.accessibility.AccessibilityNodeInfo,java.lang.String) -> c

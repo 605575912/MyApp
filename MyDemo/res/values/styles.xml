@@ -1,0 +1,186 @@
+<resources>
+
+
+   <style name="SettingViewContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setting_view_min_height</item>
+        <item name="android:background">@drawable/setting_view_item_selector</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SettingViewIcon">
+        <item name="android:layout_width">@dimen/setting_view_min_height</item>
+        <item name="android:layout_height">@dimen/setting_view_min_height</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="SettingViewRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_marginRight">@dimen/setting_view_lr_padding</item>
+    </style>
+
+    <style name="SettingViewArrow" parent="@style/SettingViewRight">
+    </style>
+
+    <style name="SettingViewCheck" parent="@style/SettingViewRight">
+        <item name="android:src">@drawable/setting_view_check</item>
+    </style>
+
+    <style name="SettingViewSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/setting_view_lr_padding</item>
+    </style>
+
+    <style name="SettingViewTextH">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/setting_view_lr_padding</item>
+        <item name="android:paddingRight">@dimen/setting_view_lr_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SettingViewTitleH" parent="@style/SettingViewTextH">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/setting_view_item_title_text</item>
+        <item name="android:textSize">@dimen/setting_view_title_size</item>
+    </style>
+
+    <style name="SettingViewSubtitleH" parent="@style/SettingViewTextH">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/setting_view_item_subtitle_text</item>
+        <item name="android:textSize">@dimen/setting_view_subtitle_size</item>
+    </style>
+
+    <style name="SettingViewTextV">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/setting_view_lr_padding</item>
+        <item name="android:paddingRight">@dimen/setting_view_lr_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SettingViewTitleV" parent="@style/SettingViewTextV">
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:textSize">@dimen/setting_view_title_size</item>
+        <item name="android:textColor">@color/setting_view_item_title_text</item>
+    </style>
+
+    <style name="SettingViewSubtitleV" parent="@style/SettingViewTextV">
+        <item name="android:gravity">left|top</item>
+        <item name="android:textSize">@dimen/setting_view_subtitle_size</item>
+        <item name="android:textColor">@color/setting_view_item_subtitle_text</item>
+    </style>
+
+    <style name="SettingViewImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">@dimen/setting_view_tb_padding</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="Widget" />
+    <style name="Widget.SampleMessage">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Widget.SampleMessageTile">
+        <item name="android:background">#ffffee</item>
+        <item name="android:shadowColor">#7F000000</item>
+        <item name="android:shadowDy">-3.5</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <declare-styleable name="CircularProgressButton">
+        <attr name="cpb_selectorIdle" format="reference"/>
+        <attr name="cpb_selectorComplete" format="reference"/>
+        <attr name="cpb_selectorError" format="reference"/>
+        <attr name="cpb_textComplete" format="string"/>
+        <attr name="cpb_textIdle" format="string"/>
+        <attr name="cpb_textError" format="string"/>
+        <attr name="cpb_textProgress" format="string"/>
+        <attr name="cpb_colorProgress" format="color"/>
+        <attr name="cpb_colorIndicator" format="color"/>
+        <attr name="cpb_colorIndicatorBackground" format="color"/>
+        <attr name="cpb_iconError" format="reference"/>
+        <attr name="cpb_iconComplete" format="reference"/>
+        <attr name="cpb_cornerRadius" format="dimension"/>
+        <attr name="cpb_paddingProgress" format="dimension"/>
+    </declare-styleable>
+
+
+    <style name="loadingStyle" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@anim/my_progress</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="theme_dialog_alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+    <style name="ActivityAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_enter</item>
+        <item name="android:windowExitAnimation">@anim/slide_exit</item>
+    </style>
+
+    <style name="anim_view">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="drop_down_list_header_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+    </style>
+
+    <style name="drop_down_list_footer_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+    </style>
+
+    <style name="drop_down_list_header_font_style">
+        <item name="android:textColor">@color/drop_down_list_header_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="drop_down_list_header_second_font_style">
+        <item name="android:textColor">@color/drop_down_list_header_second_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="drop_down_list_footer_font_style">
+        <item name="android:textColor">@color/drop_down_list_footer_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+</resources>

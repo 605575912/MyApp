@@ -1,0 +1,1 @@
+[{"cat":"buck","name":"process_name","ph":"M","pid":0,"tid":0,"ts":0,"args":{"name":"buck"}},{"cat":"buck","name":"install","ph":"B","pid":0,"tid":356,"ts":1595822375,"args":{"command_args":"run app"}},{"cat":"buck","name":"install","ph":"E","pid":0,"tid":356,"ts":1595826693,"args":{"command_args":"run app","daemon":"false"}}]

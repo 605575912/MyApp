@@ -1,0 +1,7 @@
+<resources>
+
+
+    <dimen name="l_w">200dp</dimen>
+
+    <dimen name="right_margn">120dp</dimen>
+</resources>

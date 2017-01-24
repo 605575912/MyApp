@@ -1,0 +1,58 @@
+10
+
+dir
+5647
+svn://lzx@192.168.1.27/03%E5%BC%80%E5%8F%91/app-android/trunk/XswStudentLibrary/res
+svn://lzx@192.168.1.27
+
+
+
+2015-08-10T02:11:42.432424Z
+5581
+lzx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bcc1e2ad-58ab-43e2-8c15-32843a7bb7d3
+
+values
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-xxhdpi
+dir
+
+anim
+dir
+
+menu
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+

@@ -1,0 +1,362 @@
+[2016-02-23 08:34:03.431][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Starting up (build date 1970-01-01 07:59:59 +0800, rev b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448), args: [install, app]
+[2016-02-23 08:34:03.436][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] System properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, jnidispatch.path=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/jna-93029210/jna2336485544085413124.tmp, os.name=Mac OS X, buck.enable_objc=true, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/classes, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_31-b13, buck.path_to_intellij_py=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_intellij_py, jna.loaded=true, buck.testrunner_classes=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/testrunner_classes, buck.logging_config_file=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/logging_config_file, buck.path_to_sh_binary_template=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_sh_binary_template, user.name=apple, buck.path_to_pywatchman=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_pywatchman, buck.report_generator_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/report_generator_jar, buck.git_commit=b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, user.language=zh, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib, java.version=1.8.0_31, user.timezone=Asia/Chongqing, buck.test_util_no_tests_dir=true, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, file.separator=/, java.specification.name=Java Platform API Specification, buck.jacoco_agent_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/jacoco_agent_jar, java.class.version=52.0, user.country=CN, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre, java.vm.info=mixed mode, os.version=10.11.2, buck.version_uid=b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, org.eclipse.jetty.util.log.class=org.eclipse.jetty.util.log.JavaUtilLog, path.separator=:, java.vm.version=25.31-b07, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, buck.dx=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/dx, buck.git_commit_timestamp=-1, user.home=/Users/apple, buck.path_to_asm_jar=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_asm_jar, java.specification.vendor=Oracle Corporation, buck.git_dirty=0, java.library.path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448, java.vendor.url=http://java.oracle.com/, java.vm.vendor=Oracle Corporation, gopherProxySet=false, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.facebook.buck.cli.bootstrapper.ClassLoaderBootstrapper com.martiansoftware.nailgun.NGServer local:.buckd/sock 60000, java.class.path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/bootstrapper_jar, buck.buckd_dir=/Users/apple/Documents/MyApp/hongbao/.buckd, buck.path_to_pathlib_py=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/pathlib.py, buck.buckd_launch_time_nanos=1595669186399, java.vm.specification.name=Java Virtual Machine Specification, com.martiansoftware.nailgun.NGServer.outputPath=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/ngserver-out, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, java.awt.headless=true, java.io.tmpdir=/Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp, buck.android_agent_path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/android_agent_path, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, jna.platform.library.path=/usr/lib:/usr/lib, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, buck.path_to_pex=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/path_to_pex, java.ext.dirs=/Users/apple/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, java.util.logging.config.class=com.facebook.buck.cli.bootstrapper.LogConfig, user.dir=/Users/apple/Documents/MyApp/hongbao, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, buck.native_exopackage_fake_path=/Users/apple/Documents/MyApp/hongbao/.buckd/resources/b7a7b9a85fa5c5dd2ff9ef062bb96b45e92b4448/native_exopackage_fake_path, file.encoding=UTF-8, java.specification.version=1.8}
+[2016-02-23 08:34:03.446][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Config] Loaded a configuration file /Users/apple/Documents/MyApp/hongbao/.buckconfig: {alias={app=//:app}, java={src_roots=/src/}, project={default_android_manifest=src/main/AndroidManifest.xml}, android={target=android-19}}
+[2016-02-23 08:34:03.446][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Config] Adding configuration overrides: {}
+[2016-02-23 08:34:03.447][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.io.Watchman] Creating for: .
+[2016-02-23 08:34:03.448][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.ListeningProcessExecutor] Launching process with params ProcessExecutorParams{command=[/usr/local/bin/watchman, --output-encoding=bser, get-sockname], directory=Optional.absent(), environment=Optional.absent(), redirectInput=Optional.absent(), redirectOutput=Optional.absent(), redirectError=Optional.absent()}
+[2016-02-23 08:34:03.451][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.ListeningProcessExecutor] Successfully launched process com.zaxxer.nuprocess.osx.OsxProcess@461590c7
+[2016-02-23 08:34:03.451][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.ListeningProcessExecutor] Waiting for process com.facebook.buck.util.ListeningProcessExecutor$LaunchedProcessImpl@feb3d6d timeout 1000000000 NANOSECONDS
+[2016-02-23 08:34:03.456][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.ListeningProcessExecutor] Wait for process returned 5
+[2016-02-23 08:34:03.456][error][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.io.Watchman] Error 5 executing get-sockname
+[2016-02-23 08:34:03.457][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Watchman capabilities: [] Watch root: Optional.absent() Project prefix: Optional.absent() Glob handler config: PYTHON 
+[2016-02-23 08:34:03.472][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleToolchainDiscovery] Searching for Xcode toolchains under /Applications/Xcode.app/Contents/Developer/Toolchains
+[2016-02-23 08:34:03.472][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleToolchainDiscovery] Searching for Xcode toolchains in /Applications/Xcode.app/Contents/Developer/Toolchains
+[2016-02-23 08:34:03.472][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleToolchainDiscovery] Getting identifier for for Xcode toolchain under /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+[2016-02-23 08:34:03.474][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleToolchainDiscovery] Mapped SDK identifier com.apple.dt.toolchain.XcodeDefault to path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+[2016-02-23 08:34:03.475][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Searching for Xcode platforms under /Applications/Xcode.app/Contents/Developer/Platforms
+[2016-02-23 08:34:03.475][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Searching for Xcode SDKs in /Applications/Xcode.app/Contents/Developer/Platforms
+[2016-02-23 08:34:03.475][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk
+[2016-02-23 08:34:03.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Specified toolchain com.apple.dt.toolchain.iOS9_0 not found for SDK path /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk
+[2016-02-23 08:34:03.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Found SDK AppleSdk{name=iphoneos9.0, version=9.0, applePlatform=ApplePlatform{name=iphoneos, architectures=[armv7, arm64], minVersionFlagPrefix=-mios-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[armv7, arm64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]}
+[2016-02-23 08:34:03.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk
+[2016-02-23 08:34:03.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Skipping already scanned SDK directory /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk
+[2016-02-23 08:34:03.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
+[2016-02-23 08:34:03.479][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Specified toolchain com.apple.dt.toolchain.iOS9_0 not found for SDK path /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
+[2016-02-23 08:34:03.479][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Found SDK AppleSdk{name=iphonesimulator9.0, version=9.0, applePlatform=ApplePlatform{name=iphonesimulator, architectures=[i386, x86_64], minVersionFlagPrefix=-mios-simulator-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]}
+[2016-02-23 08:34:03.479][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.0.sdk
+[2016-02-23 08:34:03.479][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Skipping already scanned SDK directory /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
+[2016-02-23 08:34:03.479][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk
+[2016-02-23 08:34:03.483][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Found SDK AppleSdk{name=macosx10.11, version=10.11, applePlatform=ApplePlatform{name=macosx, architectures=[i386, x86_64], minVersionFlagPrefix=-mmacosx-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=true}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]}
+[2016-02-23 08:34:03.483][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk
+[2016-02-23 08:34:03.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Specified toolchain com.apple.dt.toolchain.WatchOS2_0 not found for SDK path /Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk
+[2016-02-23 08:34:03.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Found SDK AppleSdk{name=watchos2.0, version=2.0, applePlatform=ApplePlatform{name=watchos, architectures=[armv7k], minVersionFlagPrefix=-mwatchos-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[armv7k], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]}
+[2016-02-23 08:34:03.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk
+[2016-02-23 08:34:03.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Skipping already scanned SDK directory /Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk
+[2016-02-23 08:34:03.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk
+[2016-02-23 08:34:03.486][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Specified toolchain com.apple.dt.toolchain.WatchOS2_0 not found for SDK path /Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk
+[2016-02-23 08:34:03.487][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Found SDK AppleSdk{name=watchsimulator2.0, version=2.0, applePlatform=ApplePlatform{name=watchsimulator, architectures=[i386], minVersionFlagPrefix=-mwatchos-simulator-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[i386], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]}
+[2016-02-23 08:34:03.487][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Fetching SDK name for /Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator2.0.sdk
+[2016-02-23 08:34:03.487][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.apple.AppleSdkDiscovery] Skipping already scanned SDK directory /Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator.sdk
+[2016-02-23 08:34:03.487][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=iphoneos9.0, version=9.0, applePlatform=ApplePlatform{name=iphoneos, architectures=[armv7, arm64], minVersionFlagPrefix=-mios-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[armv7, arm64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 9.0
+[2016-02-23 08:34:03.502][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=iphonesimulator9.0, version=9.0, applePlatform=ApplePlatform{name=iphonesimulator, architectures=[i386, x86_64], minVersionFlagPrefix=-mios-simulator-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 9.0
+[2016-02-23 08:34:03.510][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=macosx10.11, version=10.11, applePlatform=ApplePlatform{name=macosx, architectures=[i386, x86_64], minVersionFlagPrefix=-mmacosx-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=true}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 10.11
+[2016-02-23 08:34:03.523][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=watchos2.0, version=2.0, applePlatform=ApplePlatform{name=watchos, architectures=[armv7k], minVersionFlagPrefix=-mwatchos-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[armv7k], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 2.0
+[2016-02-23 08:34:03.528][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=watchsimulator2.0, version=2.0, applePlatform=ApplePlatform{name=watchsimulator, architectures=[i386], minVersionFlagPrefix=-mwatchos-simulator-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[i386], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 2.0
+[2016-02-23 08:34:03.532][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=iphoneos, version=9.0, applePlatform=ApplePlatform{name=iphoneos, architectures=[armv7, arm64], minVersionFlagPrefix=-mios-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[armv7, arm64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 9.0
+[2016-02-23 08:34:03.544][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=iphonesimulator, version=9.0, applePlatform=ApplePlatform{name=iphonesimulator, architectures=[i386, x86_64], minVersionFlagPrefix=-mios-simulator-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=false}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 9.0
+[2016-02-23 08:34:03.550][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=macosx, version=10.11, applePlatform=ApplePlatform{name=macosx, architectures=[i386, x86_64], minVersionFlagPrefix=-mmacosx-version-min=, stubBinaryPath=Optional.absent(), appIncludesFrameworks=true}, architectures=[i386, x86_64], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 10.11
+[2016-02-23 08:34:03.561][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=watchos, version=2.0, applePlatform=ApplePlatform{name=watchos, architectures=[armv7k], minVersionFlagPrefix=-mwatchos-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[armv7k], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 2.0
+[2016-02-23 08:34:03.567][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.rules.KnownBuildRuleTypes] SDK AppleSdk{name=watchsimulator, version=2.0, applePlatform=ApplePlatform{name=watchsimulator, architectures=[i386], minVersionFlagPrefix=-mwatchos-simulator-version-min=, stubBinaryPath=Optional.of(Library/Application Support/WatchKit/WK), appIncludesFrameworks=false}, architectures=[i386], toolchains=[AppleToolchain{identifier=com.apple.dt.toolchain.XcodeDefault, version=15A268, path=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain}]} using default version 2.0
+[2016-02-23 08:34:03.572][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cxx.CxxPlatforms] Using system default C++ platform CxxPlatform{flavor=default, as=com.facebook.buck.rules.HashedFileTool@2cf8904c, asflags=[], aspp=com.facebook.buck.cxx.ClangPreprocessor@28229408, asppflags=[], cc=com.facebook.buck.cxx.ClangCompiler@425baa63, cflags=[], cxx=com.facebook.buck.cxx.ClangCompiler@148de710, cxxflags=[], cpp=com.facebook.buck.cxx.ClangPreprocessor@7c1f6f3d, cppflags=[], cxxpp=com.facebook.buck.cxx.ClangPreprocessor@40a12662, cxxppflags=[], ld=com.facebook.buck.cxx.DarwinLinker@5fb684a7, ldflags=[], runtimeLdflags={}, strip=com.facebook.buck.rules.HashedFileTool@24784d26, stripFlags=[], ar=com.facebook.buck.cxx.BsdArchiver@2319b813, arflags=[], ranlib=com.facebook.buck.rules.HashedFileTool@6a420824, ranlibflags=[], symbolNameTool=com.facebook.buck.cxx.PosixNmSymbolNameTool@1ba2a77, sharedLibraryExtension=dylib, sharedLibraryVersionedExtensionFormat=.%s.dylib, debugPathSanitizer=com.facebook.buck.cxx.DebugPathSanitizer@79b94bdd, flagMacros={}}
+[2016-02-23 08:34:03.590][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Starting render scheduler (interval 100 ms)
+[2016-02-23 08:34:03.591][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.environment.MacWifiSsidFinder] Getting current SSID..
+[2016-02-23 08:34:03.592][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.environment.MacWifiSsidFinder] Getting SSID from Wi-Fi interface: <CWInterface: 0x7feefb93cd50> [interfaceName=en0]
+[2016-02-23 08:34:03.593][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.environment.MacWifiSsidFinder] Found SSID: ASPire-WiFi
+[2016-02-23 08:34:03.604][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] CommandStarted(install, isDaemon: false)
+[2016-02-23 08:34:03.604][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.parser.DaemonicParserState] Invalidating all caches
+[2016-02-23 08:34:03.605][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParsingProgressUpdated(progress=0.0)
+[2016-02-23 08:34:03.605][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Creating temporary buck.py instance...
+[2016-02-23 08:34:03.605][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuckFilesParseStarted()
+[2016-02-23 08:34:03.651][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Created temporary buck.py instance at /Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/buck4500774409925702074.py.
+[2016-02-23 08:34:03.652][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Starting buck.py command: [/usr/bin/python, -u, /Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/buck4500774409925702074.py, --allow_empty_globs, --project_root, /Users/apple/Documents/MyApp/hongbao, --build_file_name, BUCK, --quiet, --config, /Users/apple/Documents/MyApp/hongbao/.buckd/tmp/buck_run.O4MTWp/raw_config1316870753333091241.json] environment: Optional.of({ANDROID_HOME=/Users/apple/Applications/android/android-sdk_studio, BUCK_TTY=1, HOME=/Users/apple, NAILGUN_FILESEPARATOR=/, LOGNAME=apple, TMPDIR=/var/folders/y5/r4l9zn_921s77s5qdc0f713c0000gn/T/, USER=apple, VERSIONER_PYTHON_VERSION=2.7, SHELL=/bin/bash, BUCK_ORIG_TMPDIR=/var/folders/y5/r4l9zn_921s77s5qdc0f713c0000gn/T/, LC_CTYPE=zh_CN.UTF-8, __CF_USER_TEXT_ENCODING=0x1F5:0x19:0x34, NAILGUN_TTY_2=1, NAILGUN_TTY_1=1, NAILGUN_TTY_0=1, NDK_ROOT=/Users/apple/Applications/android/android-sdk_studio/android-ndk-r10, VERSIONER_PYTHON_PREFER_32_BIT=no, NAILGUN_PATHSEPARATOR=:, PATH=/opt/subversion/bin:/Users/apple/buck/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/apple/Applications/android/android-sdk-macosx/platform-tools:/Users/apple/Applications/android/android-sdk_studio/android-ndk-r10, TERM=xterm-256color, _=/usr/local/bin/buck})
+[2016-02-23 08:34:03.657][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Started process com.facebook.buck.util.ProcessExecutor$LaunchedProcessImpl@507dadd7 successfully
+[2016-02-23 08:34:03.658][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Parsing output of process com.facebook.buck.util.ProcessExecutor$LaunchedProcessImpl@507dadd7...
+[2016-02-23 08:34:03.658][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParseBuckFileStarted(/Users/apple/Documents/MyApp/hongbao/BUCK)
+[2016-02-23 08:34:03.776][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:102][com.facebook.buck.json.ProjectBuildFileParser] Parsed 6 rules from process
+[2016-02-23 08:34:03.776][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParseBuckFileFinished(/Users/apple/Documents/MyApp/hongbao/BUCK)
+[2016-02-23 08:34:03.777][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParsingProgressUpdated(progress=1.0)
+[2016-02-23 08:34:03.802][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.json.ProjectBuildFileParser] Waiting for process com.facebook.buck.util.ProcessExecutor$LaunchedProcessImpl@507dadd7 to exit...
+[2016-02-23 08:34:03.802][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.json.ProjectBuildFileParser] Process com.facebook.buck.util.ProcessExecutor$LaunchedProcessImpl@507dadd7 exited cleanly.
+[2016-02-23 08:34:03.803][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuckFilesParseFinished()
+[2016-02-23 08:34:03.803][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.parser.PerBuildState] Cleaning cache of build files with inputs under symlink []
+[2016-02-23 08:34:03.804][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.parser.PerBuildState] Cleaning cache of build files with inputs under symlink []
+[2016-02-23 08:34:03.805][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] Build started at 2016-02-23 08:34:03.804
+[2016-02-23 08:34:03.806][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.parser.PerBuildState] Cleaning cache of build files with inputs under symlink []
+[2016-02-23 08:34:03.806][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParseStarted(//:app)
+[2016-02-23 08:34:03.809][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.parser.PerBuildState] Cleaning cache of build files with inputs under symlink []
+[2016-02-23 08:34:03.813][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] ParseFinished(//:app)
+[2016-02-23 08:34:03.813][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphStarted()
+[2016-02-23 08:34:03.814][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphProcessed(1 of 4)
+[2016-02-23 08:34:03.814][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphProcessed(2 of 4)
+[2016-02-23 08:34:03.814][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphProcessed(3 of 4)
+[2016-02-23 08:34:03.814][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphProcessed(4 of 4)
+[2016-02-23 08:34:03.815][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildActionGraphFinished()
+[2016-02-23 08:34:03.816][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] RuleCountCalculated(//:app)
+[2016-02-23 08:34:03.818][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.0)
+[2016-02-23 08:34:03.818][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.01)
+[2016-02-23 08:34:03.818][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.02)
+[2016-02-23 08:34:03.826][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.03)
+[2016-02-23 08:34:03.827][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.04)
+[2016-02-23 08:34:03.827][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.05)
+[2016-02-23 08:34:03.827][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.06)
+[2016-02-23 08:34:03.827][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.07)
+[2016-02-23 08:34:03.831][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.09)
+[2016-02-23 08:34:03.836][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.1)
+[2016-02-23 08:34:03.836][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.11)
+[2016-02-23 08:34:03.838][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.12)
+[2016-02-23 08:34:03.838][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.13)
+[2016-02-23 08:34:03.841][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.14)
+[2016-02-23 08:34:03.841][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.15)
+[2016-02-23 08:34:03.842][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.16)
+[2016-02-23 08:34:03.842][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.17)
+[2016-02-23 08:34:03.842][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.2)
+[2016-02-23 08:34:03.843][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.rules.CachingBuildEngine] Building locally: //:app#aapt_package
+[2016-02-23 08:34:03.847][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.21)
+[2016-02-23 08:34:03.847][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir_&&_symlink_file)
+[2016-02-23 08:34:03.847][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.23)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.26)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir_&&_symlink_file)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.3)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.32)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir)
+[2016-02-23 08:34:03.848][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(rm_&&_mkdir)
+[2016-02-23 08:34:03.849][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(rm_&&_mkdir)
+[2016-02-23 08:34:03.849][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(rm_&&_mkdir)
+[2016-02-23 08:34:03.851][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(rm_&&_mkdir)
+[2016-02-23 08:34:03.853][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.shell.ShellStep] Command: /Users/apple/Applications/android/android-sdk_studio/build-tools/23.0.2/aapt package -f -G buck-out/gen/__app#aapt_package__proguard__/.proguard/proguard.txt --auto-add-overlay -S src/main/res --output-text-symbols buck-out/bin/__app#aapt_package_res_symbols__ -J buck-out/bin/__app#aapt_package_res_symbols__ -M buck-out/bin/__manifest_app#aapt_package__/AndroidManifest.xml -I /Users/apple/Applications/android/android-sdk_studio/platforms/android-19/android.jar -F buck-out/gen/app#aapt_package.unsigned.ap_ --ignore-assets !.gitkeep:!.svn:!.git:!.ds_store:!*.scc:.*:<dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:*.orig
+[2016-02-23 08:34:03.854][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(aapt_package)
+[2016-02-23 08:34:03.926][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.shell.ShellStep] [/Users/apple/Applications/android/android-sdk_studio/build-tools/23.0.2/aapt, package, -f, -G, buck-out/gen/__app#aapt_package__proguard__/.proguard/proguard.txt, --auto-add-overlay, -S, src/main/res, --output-text-symbols, buck-out/bin/__app#aapt_package_res_symbols__, -J, buck-out/bin/__app#aapt_package_res_symbols__, -M, buck-out/bin/__manifest_app#aapt_package__/AndroidManifest.xml, -I, /Users/apple/Applications/android/android-sdk_studio/platforms/android-19/android.jar, -F, buck-out/gen/app#aapt_package.unsigned.ap_, --ignore-assets, !.gitkeep:!.svn:!.git:!.ds_store:!*.scc:.*:<dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:*.orig]: exit code: 0. os load (before, after): (5.192383, 5.192383). CPU count: 4.
+stdout:
+
+stderr:
+
+
+[2016-02-23 08:34:03.926][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(aapt_package)
+[2016-02-23 08:34:03.926][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(touch)
+[2016-02-23 08:34:03.927][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(touch)
+[2016-02-23 08:34:03.927][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(rm_&&_mkdir)
+[2016-02-23 08:34:03.928][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(rm_&&_mkdir)
+[2016-02-23 08:34:03.928][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(android-res-merge)
+[2016-02-23 08:34:03.930][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(android-res-merge)
+[2016-02-23 08:34:03.931][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(rm_&&_mkdir)
+[2016-02-23 08:34:03.933][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(rm_&&_mkdir)
+[2016-02-23 08:34:03.934][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir)
+[2016-02-23 08:34:03.934][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir)
+[2016-02-23 08:34:03.934][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(javac)
+[2016-02-23 08:34:04.268][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.parseStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.292][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.parseFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.292][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.enterStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.383][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.enterFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.384][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.analyzeStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.418][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.analyzeFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.428][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.468][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.468][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.469][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.469][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.470][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.470][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.472][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.472][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.473][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.473][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.474][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.475][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.476][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateStarted(//:app#aapt_package)
+[2016-02-23 08:34:04.477][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] javac.generateFinished(//:app#aapt_package)
+[2016-02-23 08:34:04.482][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.jvm.java.Jsr199Javac] javac: : warning: 未与 -source 1.7 一起设置引导类路径
+
+[2016-02-23 08:34:04.483][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(javac)
+[2016-02-23 08:34:04.483][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(rm_&&_mkdir)
+[2016-02-23 08:34:04.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(rm_&&_mkdir)
+[2016-02-23 08:34:04.484][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(get_class_names)
+[2016-02-23 08:34:04.489][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(get_class_names)
+[2016-02-23 08:34:04.489][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepStarted(record_file_sha1)
+[2016-02-23 08:34:04.490][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.step.DefaultStepRunner] StepFinished(record_file_sha1)
+[2016-02-23 08:34:04.490][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:107][com.facebook.buck.rules.CachingBuildEngine] Build completed: aapt_package_resources //:app#aapt_package (643264855ns)
+[2016-02-23 08:34:04.495][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.34)
+[2016-02-23 08:34:04.497][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.rules.CachingBuildEngine] Building locally: //:app
+[2016-02-23 08:34:04.498][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir)
+[2016-02-23 08:34:04.498][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir)
+[2016-02-23 08:34:04.499][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(cp)
+[2016-02-23 08:34:04.499][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(cp)
+[2016-02-23 08:34:04.499][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(write_proguard_command_line_parameters)
+[2016-02-23 08:34:04.500][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(write_proguard_command_line_parameters)
+[2016-02-23 08:34:04.500][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.shell.ShellStep] Command: java -Xmx1024M -jar /Users/apple/Applications/android/android-sdk_studio/tools/proguard/lib/proguard.jar @buck-out/gen/__app#aapt_package__proguard__/.proguard/command-line.txt
+[2016-02-23 08:34:04.500][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(proguard_obfuscation)
+[2016-02-23 08:34:04.505][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.39)
+[2016-02-23 08:34:06.093][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.shell.ShellStep] [java, -Xmx1024M, -jar, /Users/apple/Applications/android/android-sdk_studio/tools/proguard/lib/proguard.jar, @buck-out/gen/__app#aapt_package__proguard__/.proguard/command-line.txt]: exit code: 0. os load (before, after): (5.192383, 5.336914). CPU count: 4.
+stdout:
+[1m[41m[37mProGuard, version 4.7
+[0m[1m[41m[37mPrinting configuration to [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/configuration.txt]...
+[0m[1m[41m[37mReading input...
+[0m[1m[41m[37mReading program jar [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/lib__activity__output/activity.jar]
+[0m[1m[41m[37mReading program directory [/Users/apple/Documents/MyApp/hongbao/buck-out/bin/__app#aapt_package_rdotjava_bin__]
+[0m[1m[41m[37mReading library jar [/Users/apple/Applications/android/android-sdk_studio/platforms/android-19/android.jar]
+[0m[1m[41m[37mInitializing...
+[0m[1m[41m[37mNote: the configuration refers to the unknown class 'com.google.vending.licensing.ILicensingService'
+[0m[1m[41m[37mNote: the configuration refers to the unknown class 'com.android.vending.licensing.ILicensingService'
+[0m[1m[41m[37mNote: there were 2 references to unknown classes.
+[0m[1m[41m[37m      You should check your configuration for typos.
+[0m[1m[41m[37mIgnoring unused library classes...
+[0m[1m[41m[37m  Original number of library classes: 3412
+[0m[1m[41m[37m  Final number of library classes:    258
+[0m[1m[41m[37mShrinking...
+[0m[1m[41m[37mRemoving unused program classes and class elements...
+[0m[1m[41m[37m  Original number of program classes: 24
+[0m[1m[41m[37m  Final number of program classes:    20
+[0m[1m[41m[37mObfuscating...
+[0m[1m[41m[37mPrinting mapping to [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/mapping.txt]...
+[0m[1m[41m[37mWriting output...
+[0m[1m[41m[37mPreparing output jar [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/buck-out/gen/lib__activity__output/activity-obfuscated.jar]
+[0m[1m[41m[37m  Copying resources from program jar [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/lib__activity__output/activity.jar]
+[0m[1m[41m[37mPreparing output jar [/Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/buck-out/bin/__app#aapt_package_rdotjava_bin__-obfuscated.jar]
+[0m[1m[41m[37m  Copying resources from program directory [/Users/apple/Documents/MyApp/hongbao/buck-out/bin/__app#aapt_package_rdotjava_bin__]
+[0m
+stderr:
+
+
+[2016-02-23 08:34:06.093][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(proguard_obfuscation)
+[2016-02-23 08:34:06.094][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(touch)
+[2016-02-23 08:34:06.094][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(touch)
+[2016-02-23 08:34:06.094][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(collect_all_class_names)
+[2016-02-23 08:34:06.097][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(collect_all_class_names)
+[2016-02-23 08:34:06.097][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir)
+[2016-02-23 08:34:06.097][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir)
+[2016-02-23 08:34:06.097][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(collect_smart_dex_inputs_hash)
+[2016-02-23 08:34:06.098][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(collect_smart_dex_inputs_hash)
+[2016-02-23 08:34:06.099][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(mkdir)
+[2016-02-23 08:34:06.099][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(mkdir)
+[2016-02-23 08:34:06.099][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(smart_dex)
+[2016-02-23 08:34:06.100][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(smart_dex)
+[2016-02-23 08:34:06.100][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(apk_builder)
+[2016-02-23 08:34:06.125][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(apk_builder)
+[2016-02-23 08:34:06.126][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(zip-scrub)
+[2016-02-23 08:34:06.126][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(zip-scrub)
+[2016-02-23 08:34:06.127][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.shell.ShellStep] Command: /Users/apple/Applications/android/android-sdk_studio/build-tools/23.0.2/zipalign -f 4 buck-out/gen/app.signed.apk buck-out/gen/app.apk
+[2016-02-23 08:34:06.127][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepStarted(zipalign)
+[2016-02-23 08:34:06.134][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.shell.ShellStep] [/Users/apple/Applications/android/android-sdk_studio/build-tools/23.0.2/zipalign, -f, 4, buck-out/gen/app.signed.apk, buck-out/gen/app.apk]: exit code: 0. os load (before, after): (5.336914, 5.336914). CPU count: 4.
+stdout:
+
+stderr:
+
+
+[2016-02-23 08:34:06.135][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.step.DefaultStepRunner] StepFinished(zipalign)
+[2016-02-23 08:34:06.135][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:105][com.facebook.buck.rules.CachingBuildEngine] Build completed: android_binary //:app (1637422248ns)
+[2016-02-23 08:34:06.140][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=0.44)
+[2016-02-23 08:34:06.140][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] Build finished at 2016-02-23 08:34:06.140
+[2016-02-23 08:34:06.140][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] BuildProgressUpdated(progress=1.0)
+[2016-02-23 08:34:06.141][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] InstallStarted(//:app)
+[2016-02-23 08:34:06.141][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] set_up_adb_call()
+[2016-02-23 08:34:06.141][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] set_up_adb_call()
+[2016-02-23 08:34:06.309][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] Installing apk on 9L7HT8IF55ZHPJMJ (H30-T10).
+[2016-02-23 08:34:08.366][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.util.Console] Build success: Successfully ran install apk //:app on 1 device(s)
+[2016-02-23 08:34:08.366][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Awaiting termination of HTTP Write executor service. Waiting for all jobs to complete, or up to maximum of 1800 seconds...
+[2016-02-23 08:34:08.367][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] InstallFinished(//:app)
+[2016-02-23 08:34:08.367][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] HttpArtifactCacheEvent.Shutdown(HttpArtifactCacheEvent.ShutdownEventKey{value=253})
+[2016-02-23 08:34:08.367][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:100][com.facebook.buck.event.listener.LoggingBuildListener] CommandFinished(install, isDaemon: false)
+[2016-02-23 08:34:08.367][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Stopping render scheduler
+[2016-02-23 08:34:08.368][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Stopping console output (stdout dirty false, stderr dirty true).
+[2016-02-23 08:34:08.368][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.event.listener.SuperConsoleEventBusListener] Stopping render scheduler
+[2016-02-23 08:34:08.368][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Awaiting termination of CPU executor service. Waiting for all jobs to complete, or up to maximum of 60 seconds...
+[2016-02-23 08:34:08.369][info ][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Awaiting termination of Disk IO executor service. Waiting for all jobs to complete, or up to maximum of 10 seconds...
+[2016-02-23 08:34:08.369][warn ][command:null][tid:90][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future was interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2016-02-23 08:34:08.370][debug][command:null][tid:90][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 08:34:08.372][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.event.listener.ChromeTraceBuildListener] Writing Chrome trace to buck-out/log/traces/build.2016-02-23.08-34-03.28a35355-5b85-4812-b5a4-fbb0e53fa615.trace
+[2016-02-23 08:34:08.467][debug][command:28a35355-5b85-4812-b5a4-fbb0e53fa615][tid:86][com.facebook.buck.cli.Main] Done.
+[2016-02-23 08:34:08.467][info ][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Server cleanly exited with status 0
+com.martiansoftware.nailgun.NGExitException: ExitException: status 0
+	at com.martiansoftware.nailgun.NGSecurityManager.checkExit(NGSecurityManager.java:56)
+	at java.lang.Runtime.exit(Runtime.java:107)
+	at java.lang.System.exit(System.java:968)
+	at com.facebook.buck.cli.Main.runMainThenExit(Main.java:1498)
+	at com.facebook.buck.cli.Main.nailMain(Main.java:1514)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:338)
+
+[2016-02-23 08:34:08.467][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 08:34:08.468][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 08:34:08.468][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 08:34:08.468][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 08:34:08.468][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 08:34:08.468][debug][command:null][tid:86][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 08:34:08.468][info ][command:null][tid:86][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 08:35:06.434][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 08:35:06.435][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 08:35:06.436][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 08:35:06.436][warn ][command:null][tid:117][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future was interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2016-02-23 08:35:06.436][debug][command:null][tid:117][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 08:35:06.436][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 08:35:06.437][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 08:35:06.437][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 08:35:06.437][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 08:35:06.437][debug][command:null][tid:89][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 08:35:06.437][info ][command:null][tid:89][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 08:35:06.437][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 08:35:06.439][debug][command:null][tid:120][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 08:35:06.439][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Tearing down client socket
+[2016-02-23 08:35:06.440][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Flushing client socket
+[2016-02-23 08:35:06.440][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Error shutting down socket I/O (this is expected if the client disconnected already)
+java.io.IOException: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:74)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.shutdownInput(NGUnixDomainSocket.java:60)
+	at com.martiansoftware.nailgun.NGSession.run(NGSession.java:384)
+Caused by: com.sun.jna.LastErrorException: [57] Socket is not connected
+	at com.martiansoftware.nailgun.NGUnixDomainSocketLibrary.shutdown(Native Method)
+	at com.martiansoftware.nailgun.NGUnixDomainSocket.doShutdown(NGUnixDomainSocket.java:71)
+	... 2 more
+
+[2016-02-23 08:35:06.440][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Closing client socket
+[2016-02-23 08:35:06.440][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Finished tearing down client socket
+[2016-02-23 08:35:06.440][debug][command:null][tid:116][com.martiansoftware.nailgun.NGSession] Waiting for next client to connect
+[2016-02-23 08:35:06.440][info ][command:null][tid:116][com.martiansoftware.nailgun.NGSession] NGSession shutting down
+[2016-02-23 08:35:06.440][warn ][command:null][tid:121][com.martiansoftware.nailgun.NGInputStream] Unknown chunk type:  
+[2016-02-23 08:35:06.441][debug][command:null][tid:120][com.martiansoftware.nailgun.NGSession] Client connected
+[2016-02-23 08:35:06.441][warn ][command:null][tid:119][com.martiansoftware.nailgun.NGInputStream] Nailgun client read future was interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.martiansoftware.nailgun.NGInputStream$1.run(NGInputStream.java:91)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+[2016-02-23 08:35:06.441][debug][command:null][tid:119][com.martiansoftware.nailgun.NGInputStream] Nailgun client read shutting down
+[2016-02-23 08:35:06.442][debug][command:null][tid:122][com.martiansoftware.nailgun.NGSession] Waiting for first client to connect
+[2016-02-23 08:35:06.443][debug][command:f8acf458-f1d7-42f6-b0ea-186b8fb66b2d][tid:120][com.facebook.buck.cli.Main] Rotating log.

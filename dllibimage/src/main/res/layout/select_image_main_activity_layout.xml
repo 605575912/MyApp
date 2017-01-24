@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/image_title_layout"></include>
+
+    <GridView
+        android:id="@+id/main_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:clipChildren="true"
+        android:fadingEdge="none"
+        android:horizontalSpacing="3dp"
+        android:listSelector="#ffffffff"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:visibility="gone"></GridView>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></ListView>
+
+
+    <include layout="@layout/image_privewbottom_layout"></include>
+
+
+</LinearLayout>

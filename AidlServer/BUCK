@@ -1,0 +1,69 @@
+keystore(
+  name = 'debug_keystore',
+  store = 'xili123.keystore',
+  properties = 'debug.keystore.properties',
+  visibility = [
+    '//:app'
+  ],
+)
+android_binary(
+  name = 'app',
+  package_type = 'DEBUG',
+  manifest = 'AndroidManifest.xml',
+  #   target = 'android-23',
+  #   android_manifest = 'AndroidManifest.xml',
+  keystore = '//:debug_keystore',
+  deps = [
+    '//:activity',
+  ],
+)
+# android_binary(
+#   name = 'app',
+#   #   package_type = 'DEBUG',
+#   manifest = 'AndroidManifest.xml',
+#   #   target = 'android-19',
+#   keystore = ':debug_keystore',
+#   deps = [
+#     '//src:activity',
+#   #     ':mylibrary-res',
+#   ],
+#   visibility = [ 'PUBLIC' ]
+# )
+# project_config(
+#   src_target = ':app',
+# )
+
+android_resource(
+  name = 'res',
+  res = 'res',
+  assets = 'assets',
+  package = 'com.example.aidlserver',
+  visibility = [
+    '//src:',
+  ],
+)
+
+android_library(
+  name = 'activity',
+  srcs = glob(['src/com/example/aidlserver/*.java']),
+  deps = [
+    '//:res',
+    '//:jar',
+  ],
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'jar',
+  binary_jar = 'libs/main.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+# project_config(
+#   src_target = ':res',
+#   src_roots = None,
+# )
+

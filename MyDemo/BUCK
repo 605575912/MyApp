@@ -1,0 +1,160 @@
+keystore(
+  name = 'debug_keystore',
+  store = 'xili123.keystore',
+  properties = 'debug.keystore.properties',
+  visibility = [
+    '//:app'
+  ],
+)
+
+android_binary(
+  name = 'release',
+  package_type = 'RELEASE',
+  manifest = 'AndroidManifest.xml',
+  #   target = 'android-19',
+  keystore = '//:debug_keystore',
+  deps = [
+    '//:activity',
+  ],
+)
+
+android_binary(
+  name = 'debug',
+  package_type = 'DEBUG',
+  manifest = 'AndroidManifest.xml',
+  proguard_config = 'proguard-rules.pro',
+  keystore = '//:debug_keystore',
+  deps = [
+    '//:activity',
+  ],
+)
+
+project_config(
+  src_target = ':app',
+)
+
+android_resource(
+  name = 'res',
+  res = 'res',
+  assets = 'assets',
+  package = 'com.lzxmy.demo',
+  visibility = [
+    '//src:',
+  ],
+)
+
+gen_aidl(
+  name = 'aidl',
+  aidl = 'src/com/android/internal/telephony/ITelephony.aidl',
+  import_path = 'src/',
+  visibility = [
+    '//src:'
+  ],
+)
+
+gen_aidl(
+  name = 'IMyService',
+  aidl = 'src/com/lzxmy/demo/aidl/IMyService.aidl',
+  import_path = 'src/',
+  visibility = [
+    '//src:'
+  ],
+)
+
+android_library(
+  name = 'activity',
+  srcs = glob(['src/**/*.java']),
+  deps = [
+    '//:res',
+    '//:native_libs',
+    '//:IMyService',
+    '//:aidl',
+    '//:Loader',
+    '//:UIFrame',
+    '//:nineoldandroids',
+    '//:android-support-v7-cardview',
+    '//:android-support-v7-palette',
+    '//:bugly_1.2.8_release',
+    '//:android-support-v4',
+    '//:android-support-v7-recyclerview',
+  ],
+  visibility = [
+    'PUBLIC'
+  ],
+)
+#so 文件
+
+prebuilt_native_library(
+  name = 'native_libs',
+  native_libs = 'libs',
+)
+#jar 文件
+
+prebuilt_jar(
+  name = 'android-support-v7-cardview',
+  binary_jar = 'libs/android-support-v7-cardview.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'android-support-v7-palette',
+  binary_jar = 'libs/android-support-v7-palette.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'android-support-v7-recyclerview',
+  binary_jar = 'libs/android-support-v7-recyclerview.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'bugly_1.2.8_release',
+  binary_jar = 'libs/bugly_1.2.8_release.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'Loader',
+  binary_jar = 'libs/Loader.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'android-support-v4',
+  binary_jar = 'libs/android-support-v4.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'UIFrame',
+  binary_jar = 'libs/UIFrame.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+
+prebuilt_jar(
+  name = 'nineoldandroids',
+  binary_jar = 'libs/nineoldandroids.jar',
+  visibility = [
+    'PUBLIC'
+  ],
+)
+# project_config(
+#   src_target = ':res',
+#   src_roots = None,
+# )
+

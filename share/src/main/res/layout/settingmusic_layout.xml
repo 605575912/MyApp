@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfaf9f9"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/mm_listitem_simple">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="BACK"
+            android:textColor="#222121"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#222121"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/bt_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:text="盯紧该盘"
+            android:textColor="#fe4242" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="股价上涨到"
+            android:textColor="#222121" />
+
+        <EditText
+            android:id="@+id/et_high"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_place_order_gray"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="visible" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:text="元"
+            android:textColor="#222121" />
+
+        <cn.yzz.lol.share.View.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/switch_view"
+            android:layout_width="66dip"
+            android:layout_height="44dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            shSwitch:shadowSpace="7dip"
+            shSwitch:tintColor="#ff62cc2f" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="股价下跌到"
+            android:textColor="#222121" />
+
+        <EditText
+            android:id="@+id/et_low"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_place_order_gray"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="visible" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:text="元"
+            android:textColor="#222121" />
+
+        <cn.yzz.lol.share.View.ShSwitchView xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/switch_low"
+            android:layout_width="66dip"
+            android:layout_height="44dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            shSwitch:shadowSpace="7dip"
+            shSwitch:tintColor="#ff62cc2f" />
+    </LinearLayout>
+</LinearLayout>

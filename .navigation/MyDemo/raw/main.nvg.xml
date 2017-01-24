@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.jswebview.AdvertisementActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.suspension.SuspensionActivity"/>
+      <point      
+        x = "600"      
+        y = "200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.jar.JarDexActivity"/>
+      <point      
+        x = "550"      
+        y = "150"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.drawg.DropDownListViewDemo"/>
+      <point      
+        x = "650"      
+        y = "250"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.matrix.MatrixAcitivity"/>
+      <point      
+        x = "748"      
+        y = "348"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.drawArc.ArcActivity"/>
+      <point      
+        x = "700"      
+        y = "300"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.drawwelcome.MainActivity58"/>
+      <point      
+        x = "848"      
+        y = "448"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.swithbutton.SwithActivity"/>
+      <point      
+        x = "800"      
+        y = "400"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.MainActivity"/>
+      <point      
+        x = "900"      
+        y = "500"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.fullscreen.CameraActivity"/>
+      <point      
+        x = "1000"      
+        y = "600"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.layer.LayerDrawableActivity"/>
+      <point      
+        x = "950"      
+        y = "550"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.slidingTab.SlidingTabActivity"/>
+      <point      
+        x = "1100"      
+        y = "700"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.multiaction.MultiActionActivity"/>
+      <point      
+        x = "1050"      
+        y = "650"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.cirelist.CirleListActivity"/>
+      <point      
+        x = "1148"      
+        y = "748"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.ryg.dynamicload.DLProxyActivity"/>
+      <point      
+        x = "1200"      
+        y = "800"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.drawstart.StartActivity"/>
+      <point      
+        x = "1250"      
+        y = "850"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.ryg.dynamicload.DLProxyFragmentActivity"/>
+      <point      
+        x = "1300"      
+        y = "900"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.foldingmenu.FoldingMenuActivity"/>
+      <point      
+        x = "1350"      
+        y = "950"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.Sample2Activity"/>
+      <point      
+        x = "1400"      
+        y = "1000"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.allswithbutton.SwithButtonMainActivity"/>
+      <point      
+        x = "1450"      
+        y = "1050"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.imgheadlistview.IMGHeaderActivity"/>
+      <point      
+        x = "1500"      
+        y = "1100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.iosswitch.IosSwitchActivity"/>
+      <point      
+        x = "1550"      
+        y = "1150"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.Algorithm.AlgorithmActivity"/>
+      <point      
+        x = "1600"      
+        y = "1200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.damp.DampActivity"/>
+      <point      
+        x = "1650"      
+        y = "1250"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.tag.LimitSelectedFragment"/>
+      <point      
+        x = "1700"      
+        y = "1300"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.shapedrawable.ShapeListActivity"/>
+      <point      
+        x = "1750"      
+        y = "1350"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.aidl.AidlActivity"/>
+      <point      
+        x = "1800"      
+        y = "1400"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.DynamicLoad.DynamicLoadMainActivity"/>
+      <point      
+        x = "1900"      
+        y = "1500"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.swithbuttongif.SwithButtonActivity"/>
+      <point      
+        x = "1850"      
+        y = "1450"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.waterdrop.WaterDropActivity"/>
+      <point      
+        x = "1950"      
+        y = "1550"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.crop.CropMainActivity"/>
+      <point      
+        x = "2050"      
+        y = "1650"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.Jumping.JumMainActivity"/>
+      <point      
+        x = "2000"      
+        y = "1600"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.Sample3Activity"/>
+      <point      
+        x = "2100"      
+        y = "1700"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.signature.SignatureActivity"/>
+      <point      
+        x = "2250"      
+        y = "1850"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.shapedrawable.ShapeMainActivity"/>
+      <point      
+        x = "2200"      
+        y = "1800"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.musicplay.MusciPlayActivity"/>
+      <point      
+        x = "2150"      
+        y = "1750"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.recelyview.MainActivity"/>
+      <point      
+        x = "2350"      
+        y = "1950"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.ProgressMainActivity"/>
+      <point      
+        x = "2300"      
+        y = "1900"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.Sample1Activity"/>
+      <point      
+        x = "2500"      
+        y = "2100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.locationimage.LocationImageActivity"/>
+      <point      
+        x = "2450"      
+        y = "2050"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.listtitleview.ListTitleActivity"/>
+      <point      
+        x = "2400"      
+        y = "2000"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progress.ProgressActivity"/>
+      <point      
+        x = "2550"      
+        y = "2150"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.Sample5Activity"/>
+      <point      
+        x = "2650"      
+        y = "2250"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.progressbutton.Sample4Activity"/>
+      <point      
+        x = "2600"      
+        y = "2200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.wireframe.ActRotate"/>
+      <point      
+        x = "2700"      
+        y = "2300"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.wireframe.WireFrameActivity"/>
+      <point      
+        x = "2750"      
+        y = "2350"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.draglistview.DragListViewActivity"/>
+      <point      
+        x = "2800"      
+        y = "2400"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.lzxmy.demo.slidingpane.SlidingPaneActivity"/>
+      <point      
+        x = "2850"      
+        y = "2450"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

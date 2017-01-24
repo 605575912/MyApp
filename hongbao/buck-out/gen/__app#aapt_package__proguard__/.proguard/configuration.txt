@@ -1,0 +1,63 @@
+-injars /Users/apple/Documents/MyApp/hongbao/buck-out/gen/lib__activity__output/activity.jar
+-outjars /Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/buck-out/gen/lib__activity__output/activity-obfuscated.jar
+-injars /Users/apple/Documents/MyApp/hongbao/buck-out/bin/__app#aapt_package_rdotjava_bin__
+-outjars /Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/buck-out/bin/__app#aapt_package_rdotjava_bin__-obfuscated.jar
+
+-libraryjars /Users/apple/Applications/android/android-sdk_studio/platforms/android-19/android.jar
+
+-dontskipnonpubliclibraryclassmembers
+-dontoptimize
+-optimizationpasses 5
+-printmapping /Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/mapping.txt
+-dontusemixedcaseclassnames
+-keepattributes *Annotation*
+-dontpreverify
+-verbose
+-dontwarn android.support.**,android.support.**
+-printconfiguration /Users/apple/Documents/MyApp/hongbao/buck-out/gen/__app#aapt_package__proguard__/.proguard/configuration.txt
+
+
+-keep public class com.google.vending.licensing.ILicensingService
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# view AndroidManifest.xml #generated:15
+-keep class com.lzx.hb.MainActivity {
+    <init>(...);
+}
+
+# view AndroidManifest.xml #generated:25
+-keep class com.lzx.hb.QiangHongBaoService {
+    <init>(...);
+}

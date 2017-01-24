@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="ratinbarheight">40dp</dimen>
+    <dimen name="table_size">14sp</dimen>
+    <dimen name="arc_rodn">3dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+
+    <!-- 老师个人 -->
+    <dimen name="title_view">240dp</dimen>
+    <dimen name="headHeight">80dp</dimen>
+    <dimen name="image_left">20dp</dimen>
+    <dimen name="image_padding">10dp</dimen>
+    <dimen name="sexHeight">20dp</dimen>
+    <dimen name="startHeight">20dp</dimen>
+    <dimen name="namesize">16sp</dimen>
+    <dimen name="startsize">18sp</dimen>
+    <dimen name="table_rode">1dp</dimen>
+    
+    <dimen name="scoronwith">3dp</dimen>
+    <dimen name="borderoutside">3dp</dimen>
+</resources>

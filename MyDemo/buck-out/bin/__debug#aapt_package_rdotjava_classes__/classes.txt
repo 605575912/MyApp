@@ -1,0 +1,15 @@
+com/lzxmy/demo/R 0af9a0b101f8e759388fed8861bbd9f3b0d3bde8
+com/lzxmy/demo/R$anim b4edebb68cdfa17abd284d3536e5290666934e2e
+com/lzxmy/demo/R$array e7355d82cd2f9435447da66137c117dc07777406
+com/lzxmy/demo/R$attr 9bfd71ff94e4d7c663ee555bf706a327f29805ed
+com/lzxmy/demo/R$bool 21f9ae98c8a87790c73a73ae714057ec29a97396
+com/lzxmy/demo/R$color f5b679cf37bfc88e22663322a7d7535d38d03abd
+com/lzxmy/demo/R$dimen 4e60190815c71bdee1352bd0078b36f981c021a4
+com/lzxmy/demo/R$drawable 405c55306567bea320e52ea0a6de7389bfbc1245
+com/lzxmy/demo/R$id 2eae3e3ae5fdcd492d3fa5648be4f167e3af7b61
+com/lzxmy/demo/R$integer c44906eb3d04bbdd845bbe20ac7d1dc31a188402
+com/lzxmy/demo/R$layout 6e60693b89746c0eca37891a76546261295229ce
+com/lzxmy/demo/R$menu 5d10dc573405a16a30e4dda9016ee37436f034d6
+com/lzxmy/demo/R$string 58afa375d8bdbd8ac5903fa5cfb789e1b090feec
+com/lzxmy/demo/R$style f98609f0226520730a8c587534bc135b67732223
+com/lzxmy/demo/R$styleable 4c7b1050ec472fd039d0143c07950eda363eb47c
