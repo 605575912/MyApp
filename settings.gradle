@@ -1,0 +1,1 @@
+include ':AidlServer','MyDemo','UIFrame',':animolibrary',':Loaderjar','jnitest','XswStudentLibrary'

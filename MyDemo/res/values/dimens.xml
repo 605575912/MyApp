@@ -102,4 +102,6 @@
     <dimen name="l_w">200dp</dimen>
 
     <dimen name="right_margn">120dp</dimen>
+
+    <dimen name="hpv6_roundxy">3dp</dimen>
 </resources>

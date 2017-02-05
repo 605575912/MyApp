@@ -105,6 +105,7 @@
         <activity android:name="com.lzxmy.demo.drawg.DropDownListViewDemo"></activity>
         <activity android:name="com.lzxmy.demo.suspension.SuspensionActivity"></activity>
         <activity android:name="com.lzxmy.demo.signature.SignatureActivity"></activity>
+        <activity android:name="com.lzxmy.demo.PoxyActivity"></activity>
 
 
 

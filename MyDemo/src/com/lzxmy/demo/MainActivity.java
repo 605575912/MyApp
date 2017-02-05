@@ -6,9 +6,7 @@ import android.content.pm.PackageInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.animation.AnimatorCompatHelper;
-import android.support.v4.animation.AnimatorUpdateListenerCompat;
-import android.support.v4.animation.ValueAnimatorCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -35,9 +33,17 @@ import com.lzxmy.demo.iosswitch.IosSwitchActivity;
 import com.lzxmy.demo.jswebview.AdvertisementActivity;
 import com.lzxmy.demo.layer.LayerDrawableActivity;
 import com.lzxmy.demo.listtitleview.ListTitleActivity;
+import com.lzxmy.demo.marquee.DaggerAppComponentFactory;
+import com.lzxmy.demo.marquee.HandlerFactory;
+import com.lzxmy.demo.marquee.MarqueeFactory;
+import com.lzxmy.demo.marquee.ViewInitFactory;
+import com.lzxmy.demo.marquee.ViewOnTouchEventFactory;
+import com.lzxmy.demo.marquee.ViewStubFactory;
+import com.lzxmy.demo.marquee.ViewToPngFactory;
 import com.lzxmy.demo.matrix.MatrixAcitivity;
 import com.lzxmy.demo.multiaction.MultiActionActivity;
 import com.lzxmy.demo.musicplay.MusciPlayActivity;
+import com.lzxmy.demo.newInstance.NewInstanceFactory;
 import com.lzxmy.demo.pobu.StaggeredGridActivity;
 import com.lzxmy.demo.progress.ProgressActivity;
 import com.lzxmy.demo.progressbutton.ProgressMainActivity;
@@ -149,7 +155,14 @@ public class MainActivity extends BaseActivity {
         datas.add(new ChooseItem("仿微信图片全屏", 36));
         datas.add(new ChooseItem("瀑布流", 38));
         datas.add(new ChooseItem("流畅动画", 39));
-
+        datas.add(new ChooseItem("反射", 40, NewInstanceFactory.class.getName()));
+        datas.add(new ChooseItem("TextView 渐影", 41, MarqueeFactory.class.getName()));
+        datas.add(new ChooseItem("View布局层次优化", 41, ViewStubFactory.class.getName()));
+        datas.add(new ChooseItem("View自定义", 41, ViewInitFactory.class.getName()));
+        datas.add(new ChooseItem("Views事件分发", 41, ViewOnTouchEventFactory.class.getName()));
+        datas.add(new ChooseItem("依赖注入", 41, DaggerAppComponentFactory.class.getName()));
+        datas.add(new ChooseItem("View 后台生成图片", 41, ViewToPngFactory.class.getName()));
+        datas.add(new ChooseItem("自定义 Looper", 41, HandlerFactory.class.getName()));
 
 
 //        Typeface typeFace = Typeface.createFromAsset(getAssets(),
@@ -165,6 +178,12 @@ public class MainActivity extends BaseActivity {
                 ChooseItem chooseItem = (ChooseItem) arg0.getAdapter().getItem(
                         arg2);
                 Intent intent = new Intent();
+                if (!TextUtils.isEmpty(chooseItem.classname)) {
+                    intent = PoxyActivity.startIntent(MainActivity.this, chooseItem.classname);
+                    startActivity(intent);
+                    return;
+                }
+
                 switch (chooseItem.getTag()) {
                     case 0: {// 侧滑移动Item删除
                         intent.setClass(MainActivity.this,
@@ -444,6 +463,7 @@ public class MainActivity extends BaseActivity {
 
                     }
                     break;
+
                     default:
                         break;
                 }

@@ -14,64 +14,70 @@ import com.support.loader.adapter.ItemData;
 import com.support.loader.adapter.UIListAdapter;
 
 public class ChooseItem extends ItemData {
-	String name = "";
-	int tag = 0;
+    String name = "";
+    String classname = "";
+    int tag = 0;
 
-	public ChooseItem(String name, int tag) {
-		this.name = name;
-		this.tag = tag;
-	}
+    public ChooseItem(String name, int tag) {
+        this.name = name;
+        this.tag = tag;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public ChooseItem(String name, int tag, String classname) {
+        this(name, tag);
+        this.classname = classname;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getTag() {
-		return tag;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setTag(int tag) {
-		this.tag = tag;
-	}
+    public int getTag() {
+        return tag;
+    }
 
-	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position, Context context) {
+    public void setTag(int tag) {
+        this.tag = tag;
+    }
 
-	}
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, Context context) {
 
-	@Override
-	public View getView(LayoutInflater listContainer, int position, View convertView, ViewGroup arg2) {
-		convertView = listContainer.inflate(R.layout.listview, null);
-		return convertView;
-	}
+    }
 
-	@Override
-	public void updateView(UIListAdapter listImageAdapter, Holder vHolder, int position, View convertView) {
-		ChooseHolder viewHolder = (ChooseHolder) vHolder;
-		viewHolder.tv_name.setText(String.valueOf(name));
-        TranslateAnimation animation = new TranslateAnimation(-convertView.getWidth() / 8 , 0, 0, 0);
+    @Override
+    public View getView(LayoutInflater listContainer, int position, View convertView, ViewGroup arg2) {
+        convertView = listContainer.inflate(R.layout.listview, null);
+        return convertView;
+    }
+
+    @Override
+    public void updateView(UIListAdapter listImageAdapter, Holder vHolder, int position, View convertView) {
+        ChooseHolder viewHolder = (ChooseHolder) vHolder;
+        viewHolder.tv_name.setText(String.valueOf(name));
+        TranslateAnimation animation = new TranslateAnimation(-convertView.getWidth() / 8, 0, 0, 0);
         animation.setDuration(600);
         animation.setFillAfter(true);
         convertView.setAnimation(animation);
         animation.start();
-	}
+    }
 
-	@Override
-	public Holder setHolder(Activity activity, Holder vHolder, View convertView) {
-		if (vHolder == null) {
-			ChooseHolder viewHolder = new ChooseHolder();
-			viewHolder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
-			return viewHolder;
-		}
-		return vHolder;
-	}
+    @Override
+    public Holder setHolder(Activity activity, Holder vHolder, View convertView) {
+        if (vHolder == null) {
+            ChooseHolder viewHolder = new ChooseHolder();
+            viewHolder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
+            return viewHolder;
+        }
+        return vHolder;
+    }
 
-	@Override
-	public void onScrollStateChanged(int i) {
+    @Override
+    public void onScrollStateChanged(int i) {
 
-	}
+    }
 }

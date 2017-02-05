@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#23ffbb"
+    android:orientation="vertical">
+
+    <com.lzxmy.demo.view.TagContentView
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/background_tab_pressed"
+            android:textSize="15sp" />
+
+        <com.lzxmy.demo.view.RoundTextView
+            android:id="@+id/round_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:ellipsize="none"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:textColor="@color/cpb_white"
+            android:textSize="8sp" />
+
+        <com.lzxmy.demo.view.RoundTextView
+            android:id="@+id/round_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:ellipsize="none"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:textColor="@color/cpb_white"
+            android:textSize="8sp" />
+    </com.lzxmy.demo.view.TagContentView>
+</LinearLayout>
