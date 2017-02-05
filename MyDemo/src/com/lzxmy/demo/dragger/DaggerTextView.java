@@ -29,7 +29,7 @@ public class DaggerTextView extends TextView {
 
     public DaggerTextView(Context context, DaggerAppComponentFactory daggerAppComponentFactory) {
         super(context);
-        ((DaggerAppComponentFactory) daggerAppComponentFactory).getappComponent().inject(this);
+        (daggerAppComponentFactory).getappComponent().inject(this);
         setText(name);
     }
 

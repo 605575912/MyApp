@@ -18,7 +18,7 @@ public class AppModule {
 
     @Provides
     public String getName() {
-        return "11哈哈注入1";
+        return "哈哈！这是注入的内容";
     }
 
     @Provides

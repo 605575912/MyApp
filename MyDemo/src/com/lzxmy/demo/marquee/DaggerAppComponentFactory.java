@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import com.lzxmy.demo.SimpleFactory;
 import com.lzxmy.demo.dragger.AppComponent;
 import com.lzxmy.demo.dragger.AppModule;
+import com.lzxmy.demo.dragger.DaggerAppComponent;
 import com.lzxmy.demo.dragger.DaggerTextView;
 import com.lzxmy.demo.dragger.MainFragmentComponent;
 
@@ -31,7 +32,6 @@ public class DaggerAppComponentFactory extends SimpleFactory {
         appComponent = DaggerAppComponent.builder().appModule(new AppModule(mactivity)).build();
         appComponent.inject(this);
         DaggerTextView textView = new DaggerTextView(mactivity, this);
-//        textView.setText("使用 DlnaFrameLayout  父控件 addview ，即可生成图片");
         linearLayout.addView(textView);
         mactivity.setContentView(linearLayout);
 

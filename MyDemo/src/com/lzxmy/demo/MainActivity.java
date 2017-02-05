@@ -36,6 +36,7 @@ import com.lzxmy.demo.listtitleview.ListTitleActivity;
 import com.lzxmy.demo.marquee.DaggerAppComponentFactory;
 import com.lzxmy.demo.marquee.HandlerFactory;
 import com.lzxmy.demo.marquee.MarqueeFactory;
+import com.lzxmy.demo.marquee.SingleFactory;
 import com.lzxmy.demo.marquee.ViewInitFactory;
 import com.lzxmy.demo.marquee.ViewOnTouchEventFactory;
 import com.lzxmy.demo.marquee.ViewStubFactory;
@@ -163,6 +164,7 @@ public class MainActivity extends BaseActivity {
         datas.add(new ChooseItem("依赖注入", 41, DaggerAppComponentFactory.class.getName()));
         datas.add(new ChooseItem("View 后台生成图片", 41, ViewToPngFactory.class.getName()));
         datas.add(new ChooseItem("自定义 Looper", 41, HandlerFactory.class.getName()));
+        datas.add(new ChooseItem("各种单例", 41, SingleFactory.class.getName()));
 
 
 //        Typeface typeFace = Typeface.createFromAsset(getAssets(),
