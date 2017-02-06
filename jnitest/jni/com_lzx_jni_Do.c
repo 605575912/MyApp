@@ -22,6 +22,7 @@
 #include <libavutil/imgutils.h>
 #include <libavutil/time.h>
 #include "logjni.h"
+#include "ffmpeg.h"
 
 #if HAVE_IO_H
 #include <io.h>
@@ -70,6 +71,7 @@
  *
  *   apps/samples/hello-jni/project/src/com/example/hellojni/HelloJni.java
  */
+int main(int argc, char **argv);
 jstring
 Java_com_lzx_jni_Do_getstringfromC(JNIEnv *env,
                                    jobject thiz, jint argc, jobjectArray args) {
@@ -90,6 +92,15 @@ Java_com_lzx_jni_Do_getstringfromC(JNIEnv *env,
         }
     }
 
+    LOGD("Run ffmpeg");
+    int result = main(argc, argv);
+    LOGD("ffmpeg result %d", result);
+
+    for (i = 0; i < argc; ++i) {
+        (*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
+    }
+    free(argv);
+    free(strr);
     return (*env)->NewStringUTF(env, "事实上");
 }
 

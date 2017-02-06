@@ -12,7 +12,7 @@
 *.hprof
 captures/*
 Loaderjar/gen/com/support/loader/BuildConfig.java
-
+.externalNativeBuild/
 build/intermediates/dex-cache/cache.xml
 
 *.iml

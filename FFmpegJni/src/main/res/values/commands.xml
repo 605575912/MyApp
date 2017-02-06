@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="commands">
+        <item>ffmpeg -i /storage/emulated/0/a.mp4 -ss 0 -t 10 -vcodec copy -acodec copy -y /sdcard/Y0.mp4</item>
+        <item>ffmpeg -i /storage/emulated/0/a.mp4 -ss 10 -t 10 -vcodec copy -acodec copy -y /sdcard/Y1.mp4</item>
+        <item>ffmpeg -i /storage/emulated/0/a.mp4 -ss 20 -t 10 -vcodec copy -acodec copy -y /sdcard/Y2.mp4</item>
+        <item>ffmpeg -i /storage/emulated/0/a.mp4 -ss 30 -t 10 -vcodec copy -acodec copy -y /sdcard/Y3.mp4</item>
+        <item>ffmpeg###-i###/storage/emulated/0/a.mp4###-s###160x90###-acodec###copy###-y###/sdcard/Y4.mp4</item>
+        <item>ffmpeg###-i###/storage/emulated/0/a.mp4###-vf###\"movie=/storage/emulated/0/2.jpg [logo]; [in][logo] overlay=10:10 [out]\"###-acodec###copy###-y###/sdcard/Y5.mp4</item>
+        <item>ffmpeg###-i###/storage/emulated/0/a.mp4###-i###/storage/emulated/0/2.jpg###-filter_complex###overlay=10:10:enable=\'between(t,0,5)\'###-acodec###copy###-y###/sdcard/Y6.mp4</item>
+    </string-array>
+    
+</resources>
