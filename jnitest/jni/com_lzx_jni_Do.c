@@ -75,6 +75,7 @@ int main(int argc, char **argv);
 jstring
 Java_com_lzx_jni_Do_getstringfromC(JNIEnv *env,
                                    jobject thiz, jint argc, jobjectArray args) {
+    LOGE("Couldn't open input stream.\n");
     char *info = avcodec_configuration();
 
     int i = 0;
@@ -93,14 +94,14 @@ Java_com_lzx_jni_Do_getstringfromC(JNIEnv *env,
     }
 
     LOGD("Run ffmpeg");
-    int result = main(argc, argv);
-    LOGD("ffmpeg result %d", result);
-
-    for (i = 0; i < argc; ++i) {
-        (*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
-    }
-    free(argv);
-    free(strr);
+//    int result = main(argc, argv);
+//    LOGD("ffmpeg result %d", result);
+//
+//    for (i = 0; i < argc; ++i) {
+//        (*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
+//    }
+//    free(argv);
+//    free(strr);
     return (*env)->NewStringUTF(env, "事实上");
 }
 

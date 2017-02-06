@@ -109,6 +109,11 @@
 #include "cmdutils.h"
 
 #include "libavutil/avassert.h"
+#include "include/libavutil/log.h"
+#include "include/libavcodec/avcodec.h"
+#include "include/libavdevice/avdevice.h"
+#include "include/libavfilter/avfilter.h"
+#include "include/libavformat/avformat.h"
 
 const char program_name[] = "ffmpeg";
 const int program_birth_year = 2000;
@@ -4118,7 +4123,7 @@ static void log_callback_null(void *ptr, int level, const char *fmt, va_list vl)
 int main(int argc, char **argv) {
     int ret;
     int64_t ti;
-
+    LOGI("ffmpeg result %d", argc);
     register_exit(ffmpeg_cleanup);
 
     setvbuf(stderr, NULL, _IONBF, 0); /* win32 runtime needs this */
@@ -4132,7 +4137,6 @@ int main(int argc, char **argv) {
         argc--;
         argv++;
     }
-
     avcodec_register_all();
 #if CONFIG_AVDEVICE
     avdevice_register_all();

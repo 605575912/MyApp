@@ -37,37 +37,51 @@ public class MainActivity extends Activity implements OnItemClickListener {
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position,
+    public void onItemClick(AdapterView<?> parent, View view, final int position,
                             long id) {
-        String testCommand = commands[position];
 
-        File file = new File("/storage/emulated/0/a.mp4");
-//        File d = new File("/storage/emulated/0");
-//        if (d.exists()) {
-//            File[] files = d.listFiles();
-//            for (File file1:files){
-//                if (file1.getName().startsWith("image")){
-//                    if (file1.getName().endsWith(".jpg")){
-//                        file1.delete();
-//                    }
-//                }
-//            }
-//        }
-        if (!file.exists()) {
-            Log.d("testCommand", testCommand);
-            Toast.makeText(this, "Cut exists", Toast.LENGTH_LONG).show();
-            return;
-        }
-        Log.d("testCommand", testCommand);
-        long i = System.currentTimeMillis();
-        if (ffmpegJni.ffmpegRunCommand(testCommand) == 0) {
-            Toast.makeText(this, "Cut success", Toast.LENGTH_LONG).show();
-            Log.d("FFmpegJni", "Cut success");
-            Log.d("FFmpegJni", "command time" + (System.currentTimeMillis() - i));
 
-        } else {
-            Toast.makeText(this, "Cut failed", Toast.LENGTH_LONG).show();
-            Log.d("FFmpegJni", "Cut failed");
-        }
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                String testCommand = commands[position];
+
+                File file = new File("/storage/emulated/0/a.mp4");
+                if (!file.exists()) {
+                    Log.d("testCommand", testCommand);
+                    return;
+                }
+                long i = System.currentTimeMillis();
+                int result = -1;
+                if (position == 5) {
+                    result = ffmpegJni.ImageToVideo("/storage/emulated/0/ffmpeg/a1.mp4", "/storage/emulated/0/ffmpeg/image%d.jpg");
+                } else {
+                    result = ffmpegJni.ffmpegRunCommand(testCommand);
+                }
+                if (result == 0) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainActivity.this, "Cut success", Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                    Log.i("FFmpegJni", " success");
+                    Log.i("FFmpegJni", "command time " + (System.currentTimeMillis() - i));
+
+                } else {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainActivity.this, "Cut failed", Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+                    Log.i("FFmpegJni", "Cut failed");
+                }
+            }
+        }.start();
+
     }
 }

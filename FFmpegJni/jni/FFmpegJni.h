@@ -14,7 +14,8 @@ extern "C" {
  */
 JNIEXPORT jint JNICALL Java_org_mqstack_ffmpegjni_FFmpegJni_run
         (JNIEnv *, jobject, jint, jobjectArray);
-
+JNIEXPORT jint JNICALL Java_org_mqstack_ffmpegjni_FFmpegJni_ImageToVideo
+        (JNIEnv *, jobject,jstring,jstring);
 #ifdef __cplusplus
 }
 #endif

@@ -61,9 +61,7 @@ include $(PREBUILT_SHARED_LIBRARY)
   #自己的so文件
     include $(CLEAR_VARS)
     LOCAL_MODULE := hello_jni
-    LOCAL_SRC_FILES := com_lzx_jni_Do.c \
-                        ffmpeg.c \
-                        config.h
+    LOCAL_SRC_FILES := com_lzx_jni_Do.c
     LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
     LOCAL_LDLIBS := -llog -lz
     LOCAL_SHARED_LIBRARIES := avcodec avdevice avfilter avformat avutil postproc swresample swscale

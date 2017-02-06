@@ -109,6 +109,7 @@
 #include "include/libavutil/avassert.h"
 #include "include/libavutil/frame.h"
 #include "include/libavformat/avio.h"
+#include "../../FFmpegJni/jni/logjni.h"
 
 const char program_name[] = "ffmpeg";
 const int program_birth_year = 2000;

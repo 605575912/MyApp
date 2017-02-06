@@ -47,7 +47,7 @@ LOCAL_SRC_FILES := FFmpegNativeHelper.c \
                    ffmpeg_opt.c \
                    ffmpeg_filter.c
 
-LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lz
+#LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lz
 
 LOCAL_SHARED_LIBRARIES:= avcodec-prebuilt-x86 \
                          avdevice-prebuilt-x86 \
@@ -59,7 +59,7 @@ LOCAL_SHARED_LIBRARIES:= avcodec-prebuilt-x86 \
 
 LOCAL_C_INCLUDES += -L$(SYSROOT)/usr/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
-
+LOCAL_LDLIBS := -llog -lz
 LOCAL_CFLAGS := -DUSE_X86_CONFIG
 
 include $(BUILD_SHARED_LIBRARY)

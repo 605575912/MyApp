@@ -47,7 +47,7 @@ LOCAL_SRC_FILES := FFmpegJni.c \
                    ffmpeg_opt.c \
                    ffmpeg_filter.c
 
-LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lz
+#LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lz
 
 LOCAL_SHARED_LIBRARIES:= avcodec-prebuilt-armeabi \
                          avdevice-prebuilt-armeabi \
@@ -57,9 +57,9 @@ LOCAL_SHARED_LIBRARIES:= avcodec-prebuilt-armeabi \
                          swresample-prebuilt-armeabi \
                          swscale-prebuilt-armeabi \
 
-LOCAL_C_INCLUDES += -L$(SYSROOT)/usr/include
+#LOCAL_C_INCLUDES += -L$(SYSROOT)/usr/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
-
+LOCAL_LDLIBS := -llog -lz
 LOCAL_CFLAGS := -DUSE_ARM_CONFIG
 
 include $(BUILD_SHARED_LIBRARY)
