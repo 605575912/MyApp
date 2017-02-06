@@ -42,6 +42,17 @@ public class MainActivity extends Activity implements OnItemClickListener {
         String testCommand = commands[position];
 
         File file = new File("/storage/emulated/0/a.mp4");
+//        File d = new File("/storage/emulated/0");
+//        if (d.exists()) {
+//            File[] files = d.listFiles();
+//            for (File file1:files){
+//                if (file1.getName().startsWith("image")){
+//                    if (file1.getName().endsWith(".jpg")){
+//                        file1.delete();
+//                    }
+//                }
+//            }
+//        }
         if (!file.exists()) {
             Log.d("testCommand", testCommand);
             Toast.makeText(this, "Cut exists", Toast.LENGTH_LONG).show();

@@ -22,7 +22,6 @@ JNIEXPORT jint JNICALL Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, job
         }
     }
 
-    LOGD("Run ffmpeg");
     int result = main(argc, argv);
     LOGD("ffmpeg result %d", result);
 

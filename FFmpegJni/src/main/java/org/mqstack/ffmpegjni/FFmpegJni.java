@@ -1,7 +1,5 @@
 package org.mqstack.ffmpegjni;
 
-import android.util.Log;
-
 /**
  * Created by mqstack on 2015/11/23.
  */
@@ -23,10 +21,6 @@ public class FFmpegJni {
             return 1;
         }
         String[] args = command.split("###");
-        for (int i = 0; i < args.length; i++) {
-            Log.d("ffmpeg-jni", args[i]);
-
-        }
         return run(args.length, args);
     }
 
