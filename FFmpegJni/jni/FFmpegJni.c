@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int mains(int argc, char **argv, jbyte *old);
+int mains(int argc, char **argv, unsigned char *old);
 
 jint Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, jobject obj, jint argc,
                                               jobjectArray args) {
