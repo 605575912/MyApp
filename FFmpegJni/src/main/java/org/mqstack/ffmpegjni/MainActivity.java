@@ -1,6 +1,8 @@
 package org.mqstack.ffmpegjni;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by mqstack on 2015/11/23.
@@ -53,9 +57,20 @@ public class MainActivity extends Activity implements OnItemClickListener {
                     return;
                 }
                 long i = System.currentTimeMillis();
+
                 int result = -1;
                 if (position == 5) {
-                    result = ffmpegJni.ImageToVideo("/storage/emulated/0/ffmpeg/a1.mp4", "/storage/emulated/0/ffmpeg/image%d.jpg");
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos);
+                    byte[] bitmapdata = bos.toByteArray();
+                    Log.i("FFmpegJni","=="+bitmapdata.length+"=="+bitmapdata[0]);
+                    try {
+                        bos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    result = ffmpegJni.ImageToVideo("/storage/emulated/0/ffmpeg/a1.mp4", "/storage/emulated/0/ffmpeg/image1.jpg",bitmapdata);
                 } else {
                     result = ffmpegJni.ffmpegRunCommand(testCommand);
                 }

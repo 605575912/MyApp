@@ -3767,7 +3767,7 @@ static int transcode_step(void) {
 /*
  * The following code is the main loop of the file converter
  */
-static int transcode(void) {
+static int transcode(uint8_t *old) {
     int ret, i;
     AVFormatContext *os;
     OutputStream *ost;
@@ -3778,9 +3778,9 @@ static int transcode(void) {
     if (ret < 0)
         goto fail;
 
-    if (stdin_interaction) {
-        av_log(NULL, AV_LOG_INFO, "Press [q] to stop, [?] for help\n");
-    }
+//    if (stdin_interaction) {
+//        av_log(NULL, AV_LOG_INFO, "Press [q] to stop, [?] for help\n");
+//    }
 
     timer_start = av_gettime_relative();
 
@@ -3922,10 +3922,9 @@ static int64_t getmaxrss(void) {
 static void log_callback_null(void *ptr, int level, const char *fmt, va_list vl) {
 }
 
-int main(int argc, char **argv) {
+int mains(int argc, char **argv, unsigned char *old) {
     int ret;
     int64_t ti;
-    LOGI("ffmpeg result %d", argc);
     register_exit(ffmpeg_cleanup);
 
     setvbuf(stderr, NULL, _IONBF, 0); /* win32 runtime needs this */
@@ -3940,7 +3939,6 @@ int main(int argc, char **argv) {
         argv++;
     }
 
-    LOGI("start init~~");
     avcodec_register_all();
 #if CONFIG_AVDEVICE
     avdevice_register_all();
@@ -3953,24 +3951,23 @@ int main(int argc, char **argv) {
 
     term_init();
 
-    LOGI("start parse option~~");
     /* parse options and open all input/output files */
-    ret = ffmpeg_parse_options(argc, argv);
-    if (ret < 0) {
-        LOGI("ffmpeg_parse_options err");
-        return 1;
-    }
-    if (nb_output_files <= 0 && nb_input_files == 0) {
-        show_usage();
-        LOGI("Use -h to get full help or, even better, run 'man %s'\n", program_name);
-        return 1;
-    }
-
-    /* file converter / grab */
-    if (nb_output_files <= 0) {
-        LOGI("At least one output file must be specified\n");
-        return 1;
-    }
+    ret = ffmpeg_parse_options(argc, argv,old);
+//    if (ret < 0) {
+//        LOGI("ffmpeg_parse_options err");
+//        return 1;
+//    }
+//    if (nb_output_files <= 0 && nb_input_files == 0) {
+//        show_usage();
+//        LOGI("Use -h to get full help or, even better, run 'man %s'\n", program_name);
+//        return 1;
+//    }
+//
+//    /* file converter / grab */
+//    if (nb_output_files <= 0) {
+//        LOGI("At least one output file must be specified\n");
+//        return 1;
+//    }
 
 //     if (nb_input_files == 0) {
 //         av_log(NULL, AV_LOG_FATAL, "At least one input file must be specified\n");
@@ -3979,24 +3976,25 @@ int main(int argc, char **argv) {
 
     current_time = ti = getutime();
     LOGI("start transcode~~");
-    if (transcode() < 0) {
-        LOGI("failed~~");
+    ret = transcode(old);
+    if (ret < 0) {
+//        LOGI("failed~~");
         return 1;
     }
     ti = getutime() - ti;
-    if (do_benchmark) {
-        LOGI("bench: utime=%0.3fs\n", ti / 1000000.0);
-    }
-    LOGI("%"
-                 PRIu64
-                 " frames successfully decoded, %"
-                 PRIu64
-                 " decoding errors\n",
-         decode_error_stat[0], decode_error_stat[1]);
-    if ((decode_error_stat[0] + decode_error_stat[1]) * max_error_rate < decode_error_stat[1])
-        LOGI("log error");
-
-    LOGI("start clean~~");
+//    if (do_benchmark) {
+//        LOGI("bench: utime=%0.3fs\n", ti / 1000000.0);
+//    }
+//    LOGI("%"
+//                 PRIu64
+//                 " frames successfully decoded, %"
+//                 PRIu64
+//                 " decoding errors\n",
+//         decode_error_stat[0], decode_error_stat[1]);
+//    if ((decode_error_stat[0] + decode_error_stat[1]) * max_error_rate < decode_error_stat[1])
+//        LOGI("log error");
+//
+//    LOGI("start clean~~");
     ffmpeg_cleanup(0);
     return main_return_code;
 }

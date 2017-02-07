@@ -1,9 +1,10 @@
 #include "FFmpegJni.h"
+#include "logjni.h"
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, char **argv);
+int mains(int argc, char **argv, jbyte *old);
 
 jint Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, jobject obj, jint argc,
                                               jobjectArray args) {
@@ -21,7 +22,7 @@ jint Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, jobject obj, jint arg
         }
     }
 
-    int result = main(argc, argv);
+    int result = mains(argc, argv, NULL);
     for (i = 0; i < argc; ++i) {
         (*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
     }
@@ -32,7 +33,8 @@ jint Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, jobject obj, jint arg
 }
 
 jint Java_org_mqstack_ffmpegjni_FFmpegJni_ImageToVideo(JNIEnv *env, jobject obj,
-                                                       jstring outfile, jstring infile) {
+                                                       jstring outfile, jstring infile,
+                                                       jarray jbyteArray) {
     char **argv = NULL;
     jint argc = 6;
     if (outfile != NULL && infile != NULL) {
@@ -43,9 +45,23 @@ jint Java_org_mqstack_ffmpegjni_FFmpegJni_ImageToVideo(JNIEnv *env, jobject obj,
         argv[3] = "-i";
         argv[4] = (char *) (*env)->GetStringUTFChars(env, infile, 0);
         argv[5] = (char *) (*env)->GetStringUTFChars(env, outfile, 0);
+        jsize len  = (*env)->GetArrayLength(env,jbyteArray);
+
+
+        jbyte *jbarray = (jbyte *)malloc(len * sizeof(jbyte));
+
+        (*env)->GetByteArrayRegion(env,jbyteArray,0,len,jbarray);
+
+LOGI("===%d==%d==%d",  len,strlen(jbarray),jbarray[0]);
+//        uint8_t *data = (uint8_t *)jbarray;//uint8_t 就是byte
+
+//        LOGI("===%d==%d==%d",  len,strlen(data),data[0]);
+//        jbyte *bytedata = (*env)->GetByteArrayElements(env, jbyteArray, 0);
+//        unsigned char *old = (unsigned char *) bytedata;
         remove(argv[5]);
-        int result = main(argc, argv);
+        int result = mains(argc, argv, jbarray);
         free(argv);
+//        (*env)->ReleaseByteArrayElements(env, jbyteArray, jbarray, 0);
         return result;
     }
     return -1;

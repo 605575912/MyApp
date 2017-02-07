@@ -26,5 +26,5 @@ public class FFmpegJni {
 
     public native int run(int argc, String[] args);
 
-    public native int ImageToVideo(String out, String input);
+    public native int ImageToVideo(String out, String strings,byte[] input);
 }
