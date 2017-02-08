@@ -60,11 +60,13 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
                 int result = -1;
                 if (position == 5) {
-                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+                    Bitmap bitmap = BitmapFactory.decodeFile("/storage/emulated/0/ffmpeg/image1.jpg");
                     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 0 /*ignored for PNG*/, bos);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 0 /*ignored for PNG*/, bos);
                     byte[] bitmapdata = bos.toByteArray();
-                    Log.i("FFmpegJni","=="+bitmapdata.length+"=="+bitmapdata[0]);
+//                    File file1 = new File("/storage/emulated/0/ffmpeg/image1.jpg");
+
+                    Log.i("FFmpegJni","java=="+bitmapdata.length+"=="+bitmapdata[0]);
                     try {
                         bos.close();
                     } catch (IOException e) {

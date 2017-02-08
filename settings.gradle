@@ -1,1 +1,1 @@
-include ':AidlServer','MyDemo','UIFrame',':animolibrary',':Loaderjar','jnitest','XswStudentLibrary','FFmpegJni'
+include ':AidlServer','MyDemo','UIFrame',':animolibrary',':Loaderjar','XswStudentLibrary','FFmpegJni'

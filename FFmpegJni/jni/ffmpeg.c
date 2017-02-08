@@ -3922,7 +3922,7 @@ static int64_t getmaxrss(void) {
 static void log_callback_null(void *ptr, int level, const char *fmt, va_list vl) {
 }
 
-int mains(int argc, char **argv, unsigned char *old) {
+int startdecode(int argc, char **argv, unsigned char *old) {
     int ret;
     int64_t ti;
     register_exit(ffmpeg_cleanup);

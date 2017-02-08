@@ -28,7 +28,6 @@
 #include "libavutil/opt.h"
 #include "libavutil/parseutils.h"
 #include "libavutil/pixdesc.h"
-#include "logjni.h"
 
 #define MATCH_PER_STREAM_OPT(name, type, outvar, fmtctx, st)\
 {\
@@ -723,31 +722,16 @@ static void assert_file_overwrite(const char *filename) {
     }
 }
 
-//读取数据的回调函数-------------------------
-//AVIOContext使用的回调函数！
-//注意：返回值是读取的字节数
-//手动初始化AVIOContext只需要两个东西：内容来源的buffer，和读取这个Buffer到FFmpeg中的函数
-//回调函数，功能就是：把buf_size字节数据送入buf即可
-//第一个参数(void *opaque)一般情况下可以不用
-int i = 0;
+
+int len = 0;
 
 int fill_iobuffer(void *opaque, uint8_t *buf, int buf_size) {
-    LOGI("fill_iobuffer   %d ", buf_size);
-//    if (!feof(fp_open)) {
-//
-////        int true_size = fread(buf, 1, buf_size, fp_open);
-////        LOGI("fill_iobuffer   ==%d", true_size);
-//        buf = oldbyte;
-//        return oldbyte;
-//    } else {
-//        return -1;
-//    }
-    if (i == 0) {
-        buf = oldbyte;
-        i = strlen(oldbyte);
-//        int true_size = fread(buf, 1, buf_size, fp_open);
-        LOGI("fill_iobuffer   ==%d,%d", buf[0], i);
-        return i;
+    if (len == 0) {
+        len = len + 10;
+        for (int i = 0; i < 3776; ++i) {
+            buf[i] = oldbyte[i];
+        }
+        return 3776;
     } else {
         return -1;
     }
@@ -886,11 +870,11 @@ static int open_input_file(OptionsContext *o, const char *filename, unsigned cha
     fp_open = fopen("/storage/emulated/0/ffmpeg/image1.jpg", "rb+");
 //    AVFormatContext *ic = NULL;
     if (old) {
-        LOGI("==========%d", old[0]);
+//        LOGI("==========%d", old[0]);
     }
     ic = avformat_alloc_context();
-    unsigned char *iobuffer = (unsigned char *) av_malloc(32768);
-    AVIOContext *avio = avio_alloc_context(iobuffer, 32768, 0, NULL, fill_iobuffer, NULL, NULL);
+    unsigned char *iobuffer = (unsigned char *) av_malloc(35000);
+    AVIOContext *avio = avio_alloc_context(iobuffer, 35000, 0, NULL, fill_iobuffer, NULL, NULL);
     ic->pb = avio;
     err = avformat_open_input(&ic, NULL, NULL, NULL);
 

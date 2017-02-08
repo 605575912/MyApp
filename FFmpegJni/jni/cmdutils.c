@@ -731,7 +731,6 @@ int split_commandline(OptionParseContext *octx, int argc, char *argv[],
         int ret;
 
         av_log(NULL, AV_LOG_DEBUG, "Reading option '%s' ...", opt);
-        LOGI("split_commandline~~ %s",opt);
         if (opt[0] == '-' && opt[1] == '-' && !opt[2]) {
             dashdash = optindex;
             continue;

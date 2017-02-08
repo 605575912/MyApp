@@ -16,7 +16,9 @@ Loaderjar/gen/com/support/loader/BuildConfig.java
 build/intermediates/dex-cache/cache.xml
 
 *.iml
-
+.DS_Store
 *.svn-base
 
 XswStudentLibrary/res/.DS_Store
+
+jnitest/jni/.DS_Store
