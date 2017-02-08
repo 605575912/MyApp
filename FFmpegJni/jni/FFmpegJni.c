@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int startdecode(int argc, char **argv, unsigned char *old);
+int startdecode(int argc, char **argv, unsigned char *old, jsize len);
 
 char *readFromFile();
 
@@ -23,7 +23,7 @@ jint Java_org_mqstack_ffmpegjni_FFmpegJni_run(JNIEnv *env, jobject obj, jint arg
         }
     }
 
-    int result = startdecode(argc, argv, NULL);
+    int result = startdecode(argc, argv, NULL, 0);
     for (i = 0; i < argc; ++i) {
         (*env)->ReleaseStringUTFChars(env, strr[i], argv[i]);
     }
@@ -49,13 +49,12 @@ jint Java_org_mqstack_ffmpegjni_FFmpegJni_ImageToVideo(JNIEnv *env, jobject obj,
         jsize len = (*env)->GetArrayLength(env, jbyteArray);
         jbyte *jbarray = (jbyte *) malloc(len * sizeof(jbyte));
         (*env)->GetByteArrayRegion(env, jbyteArray, 0, len, jbarray);
-        jint jlen = (jint) len;
         unsigned char *byBuf = NULL;
         byBuf = (char *) malloc(len + 1);
         memcpy(byBuf, jbarray, len);
 //        byBuf[len] = '\0';
         remove(argv[5]);
-        int result = startdecode(argc, argv, byBuf);
+        int result = startdecode(argc, argv, byBuf, len);
         free(argv);
         (*env)->ReleaseByteArrayElements(env, jbyteArray, jbarray, 0);
         free(byBuf);

@@ -19,6 +19,7 @@
  */
 
 #include <stdint.h>
+#include <jni.h>
 
 #include "ffmpeg.h"
 
@@ -88,7 +89,6 @@ int qp_hist = 0;
 int stdin_interaction = 1;
 int frame_bits_per_raw_sample = 0;
 float max_error_rate = 2.0 / 3;
-FILE *fp_open;
 unsigned char *oldbyte;
 static int intra_only = 0;
 static int file_overwrite = 0;
@@ -724,14 +724,14 @@ static void assert_file_overwrite(const char *filename) {
 
 
 int len = 0;
-
+jsize slen = 3776;
 int fill_iobuffer(void *opaque, uint8_t *buf, int buf_size) {
     if (len == 0) {
         len = len + 10;
-        for (int i = 0; i < 3776; ++i) {
+        for (int i = 0; i < slen; ++i) {
             buf[i] = oldbyte[i];
         }
-        return 3776;
+        return slen;
     } else {
         return -1;
     }
@@ -768,7 +768,8 @@ static void dump_attachment(AVStream *st, const char *filename) {
     avio_close(out);
 }
 
-static int open_input_file(OptionsContext *o, const char *filename, unsigned char *old) {
+static int open_input_file(OptionsContext *o, const char *filename, unsigned char *old,jsize
+                           len) {
     InputFile *f;
     AVFormatContext *ic;
     AVInputFormat *file_iformat = NULL;
@@ -783,6 +784,7 @@ static int open_input_file(OptionsContext *o, const char *filename, unsigned cha
     char *subtitle_codec_name = NULL;
     int scan_all_pmts_set = 0;
     oldbyte = old;
+    slen = len;
     if (o->format) {
         if (!(file_iformat = av_find_input_format(o->format))) {
             av_log(NULL, AV_LOG_FATAL, "Unknown input format: '%s'\n", o->format);
@@ -867,11 +869,7 @@ static int open_input_file(OptionsContext *o, const char *filename, unsigned cha
     }
     /* open the input file with generic avformat function */
 
-    fp_open = fopen("/storage/emulated/0/ffmpeg/image1.jpg", "rb+");
 //    AVFormatContext *ic = NULL;
-    if (old) {
-//        LOGI("==========%d", old[0]);
-    }
     ic = avformat_alloc_context();
     unsigned char *iobuffer = (unsigned char *) av_malloc(35000);
     AVIOContext *avio = avio_alloc_context(iobuffer, 35000, 0, NULL, fill_iobuffer, NULL, NULL);
@@ -1748,7 +1746,7 @@ int write_buffer(void *opaque, uint8_t *buf, int buf_size) {
     }
 }
 
-static int open_output_file(OptionsContext *o, const char *filename, unsigned char *old) {
+static int open_output_file(OptionsContext *o, const char *filename, unsigned char *old,jsize slen) {
     AVFormatContext *oc;
     int i, j, err;
     AVOutputFormat *file_oformat;
@@ -2736,8 +2734,8 @@ static const OptionGroupDef groups[] = {
 };
 
 static int open_files(OptionGroupList *l, const char *inout,
-                      int (*open_file)(OptionsContext *, const char *, unsigned char *),
-                      unsigned char *old) {
+                      int (*open_file)(OptionsContext *, const char *, unsigned char *,jsize),
+                      unsigned char *old,jsize slen) {
     int i, ret;
 
     for (i = 0; i < l->nb_groups; i++) {
@@ -2755,7 +2753,7 @@ static int open_files(OptionGroupList *l, const char *inout,
         }
 
         av_log(NULL, AV_LOG_DEBUG, "Opening an %s file: %s.\n", inout, g->arg);
-        ret = open_file(&o, g->arg, old);
+        ret = open_file(&o, g->arg, old,slen);
         uninit_options(&o);
         if (ret < 0) {
             av_log(NULL, AV_LOG_ERROR, "Error opening %s file %s.\n",
@@ -2769,7 +2767,7 @@ static int open_files(OptionGroupList *l, const char *inout,
 }
 
 
-int ffmpeg_parse_options(int argc, char **argv, unsigned char *old) {
+int ffmpeg_parse_options(int argc, char **argv, unsigned char *old,jsize slen) {
     OptionParseContext octx;
     uint8_t error[128];
     int ret;
@@ -2791,7 +2789,7 @@ int ffmpeg_parse_options(int argc, char **argv, unsigned char *old) {
     }
 
     /* open input files */
-    ret = open_files(&octx.groups[GROUP_INFILE], "input", open_input_file, old);
+    ret = open_files(&octx.groups[GROUP_INFILE], "input", open_input_file, old,slen);
     if (ret < 0) {
         av_log(NULL, AV_LOG_FATAL, "Error opening input files: ");
         goto fail;
@@ -2799,7 +2797,7 @@ int ffmpeg_parse_options(int argc, char **argv, unsigned char *old) {
 
     /* open output files */
 
-    ret = open_files(&octx.groups[GROUP_OUTFILE], "output", open_output_file, NULL);
+    ret = open_files(&octx.groups[GROUP_OUTFILE], "output", open_output_file, NULL,0);
     if (ret < 0) {
         av_log(NULL, AV_LOG_FATAL, "Error opening output files: ");
         goto fail;

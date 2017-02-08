@@ -83,6 +83,7 @@
 #if HAVE_PTHREADS
 
 #include <pthread.h>
+#include <jni.h>
 
 #endif
 
@@ -3922,7 +3923,7 @@ static int64_t getmaxrss(void) {
 static void log_callback_null(void *ptr, int level, const char *fmt, va_list vl) {
 }
 
-int startdecode(int argc, char **argv, unsigned char *old) {
+int startdecode(int argc, char **argv, unsigned char *old,jsize len) {
     int ret;
     int64_t ti;
     register_exit(ffmpeg_cleanup);
@@ -3952,7 +3953,7 @@ int startdecode(int argc, char **argv, unsigned char *old) {
     term_init();
 
     /* parse options and open all input/output files */
-    ret = ffmpeg_parse_options(argc, argv,old);
+    ret = ffmpeg_parse_options(argc, argv,old,len);
 //    if (ret < 0) {
 //        LOGI("ffmpeg_parse_options err");
 //        return 1;

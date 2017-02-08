@@ -22,3 +22,5 @@ build/intermediates/dex-cache/cache.xml
 XswStudentLibrary/res/.DS_Store
 
 jnitest/jni/.DS_Store
+
+.DS_Store

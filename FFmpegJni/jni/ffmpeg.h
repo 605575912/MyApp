@@ -24,7 +24,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <signal.h>
-
+#include <jni.h>
 #if HAVE_PTHREADS
 #include <pthread.h>
 #endif
@@ -523,7 +523,7 @@ int configure_output_filter(FilterGraph *fg, OutputFilter *ofilter, AVFilterInOu
 int ist_in_filtergraph(FilterGraph *fg, InputStream *ist);
 FilterGraph *init_simple_filtergraph(InputStream *ist, OutputStream *ost);
 
-int ffmpeg_parse_options(int argc, char **argv,uint8_t *old);
+int ffmpeg_parse_options(int argc, char **argv, unsigned char *old,jsize len);
 
 int vdpau_init(AVCodecContext *s);
 int dxva2_init(AVCodecContext *s);
